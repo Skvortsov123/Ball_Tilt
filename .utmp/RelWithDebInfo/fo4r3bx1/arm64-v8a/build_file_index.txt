@@ -1,0 +1,2 @@
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt

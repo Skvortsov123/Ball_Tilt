@@ -1,0 +1,17 @@
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/GAToUnityCallbacks.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/MacroEnd.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/MacroHeaderBegin.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/MacroSourceBegin.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGAApplication.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGAConfiguration.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGADebug.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGAEvents.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGAInput.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGASoftKeyboard.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGASoftKeyboardCallbacks.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGATypes.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UGAVersion.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UnityToGACallbacks.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UnityToGAConfigurationCallbacks.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UnityToGAKeyEventCallbacks.h
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/UnityToGAMotionEventCallbacks.h

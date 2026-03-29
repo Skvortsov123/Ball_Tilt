@@ -1,0 +1,5 @@
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/.utmp/RelWithDebInfo/fo4r3bx1/arm64-v8a/CMakeFiles/edit_cache.dir
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/.utmp/RelWithDebInfo/fo4r3bx1/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/.utmp/RelWithDebInfo/fo4r3bx1/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/.utmp/RelWithDebInfo/fo4r3bx1/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/mnt/ssd500/Projects/SU/MAPP/Ball_Tilt/.utmp/RelWithDebInfo/fo4r3bx1/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
-public class GravityControl : MonoBehaviour
+public class TiltGravityController : MonoBehaviour
 {
     public float speed = 1f;
+    public Vector3 offset;
     private Rigidbody rb;
 
     void Start()
@@ -14,12 +16,6 @@ public class GravityControl : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 tilt = Input.acceleration;
-        print(tilt);
-        rb.AddForce(new Vector3(tilt.x, tilt.z, tilt.y)*speed);
-    }
-
-    void Update()
-    {
-        
+        rb.AddForce((new Vector3(tilt.x, tilt.z, tilt.y) + offset ) * speed * rb.mass);
     }
 }
