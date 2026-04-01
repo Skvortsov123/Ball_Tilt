@@ -10,7 +10,7 @@ public class TiltGravityController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = false;
+        rb.useGravity = true;
     }
 
     void FixedUpdate()
