@@ -22,7 +22,7 @@ public class TiltControl : MonoBehaviour
         rb.AddForce((new Vector3(tilt.x, tilt.z, tilt.y) + offset ) * speed * rb.mass);
         if (keyboardControl)
         {
-            rb.AddForce(new Vector3(moveInput.x , 0, moveInput.y) * speed);
+            rb.AddForce(new Vector3(moveInput.y , 0, -moveInput.x) * speed);
         }
     }
 
