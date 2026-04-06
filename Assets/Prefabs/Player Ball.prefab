@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::gravityControl
   speed: 50
-  offset: {x: 0.5, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: 0}
   keyboardControl: 1
 --- !u!114 &6044394536692062664
 MonoBehaviour:
