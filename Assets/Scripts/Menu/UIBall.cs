@@ -2,32 +2,27 @@ using UnityEngine;
 
 public class UIBall : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] float speed = 800f;              // Hur snabbt tilt påverkar bollen
-    [SerializeField] float maxSpeed = 1000f;          // Maxhastighet (för stabilitet)
-    [SerializeField] float friction = 0.98f;          // Broms (0.98 = lite friktion)
 
-    [Header("Bounce")]
-    [SerializeField] float bounceDamping = 0.9f;      // Hur mycket fart som behålls vid studs
-    [SerializeField] float minBounceForce = 200f;     // Minsta studs så den inte fastnar
+    public float speed = 1f;
+    public Vector3 offset;
 
-    [Header("Targets (UI to bounce on)")]
-    [SerializeField] Transform[] bounceTargets;       // Dra in PlayButton etc här
-
-    private Vector2 velocity;
-    private RectTransform rect;
-    private RectTransform parentRect;
+    private Rigidbody rb;
+    private Vector3 lastVelocity;
 
     void Start()
     {
-        rect = GetComponent<RectTransform>();
+
+
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = true;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;  // Makes ball render in higher (120) fps while physics has 50 tps, smooth graphics
 
         // Hitta canvasen som detta UI-element tillhör
         Canvas canvas = GetComponentInParent<Canvas>();
         parentRect = canvas.GetComponent<RectTransform>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         ApplyTiltMovement();
         Move();
@@ -38,19 +33,11 @@ public class UIBall : MonoBehaviour
     //  Tilt  acceleration
     void ApplyTiltMovement()
     {
+ 
+
         Vector3 tilt = Input.acceleration;
-
-        // Konvertera mobilens tilt till UI-rörelse
-        Vector2 input = new Vector2(tilt.x, tilt.y);
-
-        velocity += input * speed * Time.deltaTime;
-
-        // Begränsa maxhastighet 
-        if (velocity.magnitude > maxSpeed)
-            velocity = velocity.normalized * maxSpeed;
-
-        // Friktion (så den lugnar ner sig)
-        velocity *= friction;
+        rb.AddForce((new Vector3(tilt.y, tilt.z, -tilt.x) + offset) * speed * rb.mass);
+       
     }
 
     //  Flytta bollen
@@ -99,41 +86,7 @@ public class UIBall : MonoBehaviour
         rect.position = screenPos;
     }
 
-    //  Kollision med UI-element (PlayButton etc)
-    void HandleTargetCollisions()
-    {
-        foreach (Transform target in bounceTargets)
-        {
-            if (target == null) continue;
+    
 
-            RectTransform targetRect = target.GetComponent<RectTransform>();
-            if (targetRect == null) continue;
-
-            if (IsOverlapping(rect, targetRect))
-            {
-                BounceOff(targetRect);
-            }
-        }
-    }
-
-    //  Kolla overlap (UI-version av collision)
-    bool IsOverlapping(RectTransform a, RectTransform b)
-    {
-        return RectTransformUtility.RectangleContainsScreenPoint(
-            b,
-            RectTransformUtility.WorldToScreenPoint(null, a.position)
-        );
-    }
-
-    //  Smart studs (riktning baserad på var vi träffar)
-    void BounceOff(RectTransform target)
-    {
-        Vector2 direction = (rect.anchoredPosition - target.anchoredPosition).normalized;
-
-        // Säkerställ att vi alltid får en studs
-        if (direction.magnitude < 0.1f)
-            direction = Random.insideUnitCircle.normalized;
-
-        velocity = direction * Mathf.Max(minBounceForce, velocity.magnitude) * bounceDamping;
-    }
+ 
 }

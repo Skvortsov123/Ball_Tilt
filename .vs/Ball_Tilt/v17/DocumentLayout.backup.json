@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\hazards\\bouncewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hazards\\bouncewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\hazards\\piston.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hazards\\piston.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\menu\\uiball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\uiball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\uiball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\decorativeBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Menu\\decorativeBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\hazards\\bouncewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hazards\\bouncewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\hazards\\ballbounce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hazards\\ballbounce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -48,6 +44,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\worldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\worldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Hazards\\BallBounce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Hazards\\BallBounce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,24 +57,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Piston.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Hazards\\Piston.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Hazards\\Piston.cs",
               "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Hazards\\Piston.cs",
               "RelativeToolTip": "Assets\\Scripts\\Hazards\\Piston.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA9wDwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-09T10:53:49.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UIBall.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\UIBall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\UIBall.cs",
@@ -82,12 +82,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Menu\\UIBall.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T10:13:43.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-09T10:13:43.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "decorativeBall.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\decorativeBall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\decorativeBall.cs",
@@ -99,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "TiltControl.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\TiltControl\\TiltControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TiltControl\\TiltControl.cs",
@@ -111,19 +110,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "BounceWall.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Hazards\\BounceWall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Hazards\\BounceWall.cs",
               "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Hazards\\BounceWall.cs",
               "RelativeToolTip": "Assets\\Scripts\\Hazards\\BounceWall.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T09:30:45.32Z"
+              "WhenOpened": "2026-04-09T09:30:45.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "BallBounce.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Hazards\\BallBounce.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Hazards\\BallBounce.cs",
@@ -135,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "endLevelTrigger.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\endLevelTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Level Scripts\\endLevelTrigger.cs",
@@ -147,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "finishDetection.cs",
               "DocumentMoniker": "C:\\Users\\spiro\\Documents\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\finishDetection.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\spiro\\Documents\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\finishDetection.cs",
@@ -159,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "hazardDetection.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Player Ball\\hazardDetection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Ball\\hazardDetection.cs",
@@ -171,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "LoadSceneButton.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\LoadSceneButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\LoadSceneButton.cs",
@@ -183,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "WorldSelector.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\WorldSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\WorldSelector.cs",
@@ -195,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "MainMenuController.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\MainMenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\MainMenuController.cs",
