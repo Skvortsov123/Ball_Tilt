@@ -982,8 +982,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Piston
   pistonVisual: {fileID: 973057600}
-  pushDirection: {x: 0.04, y: 0, z: 1}
-  pushDistance: 1.11
+  pushDirection: {x: 9, y: 0, z: 1}
+  pushDistance: 2
   pushSpeed: 20
   returnSpeed: 5
   force: 22.6
@@ -1101,7 +1101,7 @@ Transform:
   m_GameObject: {fileID: 973057594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.006, y: 0.573, z: -2.565}
+  m_LocalPosition: {x: -2.335, y: 0.483, z: -3.592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1716,7 +1716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906720878782457010, guid: 2f13d349c4043244f8efbfb2feee86aa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: -5.121
       objectReference: {fileID: 0}
     - target: {fileID: 6906720878782457010, guid: 2f13d349c4043244f8efbfb2feee86aa, type: 3}
       propertyPath: m_LocalRotation.w
