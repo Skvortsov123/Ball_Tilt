@@ -54,7 +54,7 @@ public class UIBall : MonoBehaviour
         Vector3 tilt = Input.acceleration;
 
         // Konvertera till 2D (UI-plan)
-        Vector2 force = new Vector2(tilt.x, tilt.y) + offset;
+        Vector2 force = new Vector2(tilt.x, -tilt.y) + offset;
 
         // Lägg till kraft på hastigheten
         velocity += force * speed * Time.deltaTime;
@@ -113,41 +113,47 @@ public class UIBall : MonoBehaviour
     //  Håll bollen inom canvasens gränser
     void ClampToBounds()
     {
-        Vector2 pos = rect.anchoredPosition;
+        Vector2 screenPos = RectTransformUtility.WorldToScreenPoint(null, rect.position);
 
-        float halfW = parentRect.rect.width / 2;
-        float halfH = parentRect.rect.height / 2;
-
-        float objHalfW = rect.rect.width / 2;
-        float objHalfH = rect.rect.height / 2;
+        float halfW = rect.rect.width / 2;
+        float halfH = rect.rect.height / 2;
 
         // Höger
-        if (pos.x > halfW - objHalfW)
+        if (screenPos.x > Screen.width - halfW)
         {
-            pos.x = halfW - objHalfW;
+            screenPos.x = Screen.width - halfW;
             velocity.x *= -bounceDamping;
         }
         // Vänster
-        else if (pos.x < -halfW + objHalfW)
+        else if (screenPos.x < halfW)
         {
-            pos.x = -halfW + objHalfW;
+            screenPos.x = halfW;
             velocity.x *= -bounceDamping;
         }
 
         // Topp
-        if (pos.y > halfH - objHalfH)
+        if (screenPos.y > Screen.height - halfH)
         {
-            pos.y = halfH - objHalfH;
+            screenPos.y = Screen.height - halfH;
             velocity.y *= -bounceDamping;
         }
         // Botten
-        else if (pos.y < -halfH + objHalfH)
+        else if (screenPos.y < halfH)
         {
-            pos.y = -halfH + objHalfH;
+            screenPos.y = halfH;
             velocity.y *= -bounceDamping;
         }
 
-        rect.anchoredPosition = pos;
+        // Tillbaka till UI position
+        Vector2 worldPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentRect,
+            screenPos,
+            null,
+            out worldPos
+        );
+
+        rect.anchoredPosition = worldPos;
     }
 }
 
