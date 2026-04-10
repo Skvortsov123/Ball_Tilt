@@ -4,6 +4,7 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject levelMenu; 
+    public Animator animator;
 
     void Start()
     {
@@ -15,11 +16,18 @@ public class MainMenuController : MonoBehaviour
     public void PlayPressed()
     {
         // När spelaren trycker på Play:
+        //kanske nån animation och ljud här??
+        animator.SetTrigger("pressPlay");
+
+    }
+
+    public void toLevelSelector()
+    {
         // Dölj mainMenu
         // sen Visa levelMenu
-        //kanske nån animation och ljud här??
-
+        //efter en animationevent i PlayStartAnimation
         mainMenu.SetActive(false);
         levelMenu.SetActive(true);
     }
+
 }
