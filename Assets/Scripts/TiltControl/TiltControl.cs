@@ -12,11 +12,11 @@ public class TiltControl : MonoBehaviour
     private Rigidbody rb;
     private Vector3 lastVelocity;
 
-    // Håller koll på om spelaren tillfälligt inte får styra bollen
+    // Hï¿½ller koll pï¿½ om spelaren tillfï¿½lligt inte fï¿½r styra bollen
     private bool controlLocked = false;
-    // Timer för hur länge kontrollen ska vara låst (starta den på 0)
+    // Timer fï¿½r hur lï¿½nge kontrollen ska vara lï¿½st (starta den pï¿½ 0)
     private float controlLockTimer = 0f;
-    // Hur länge kontrollen ska vara låst efter en bounce (justera vid behov)
+    // Hur lï¿½nge kontrollen ska vara lï¿½st efter en bounce (justera vid behov)
     [SerializeField] float controlLockDuration = 0.2f;
 
 
@@ -29,18 +29,18 @@ public class TiltControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Om kontrollen är låst, räkna ner tiden
+        // Om kontrollen ï¿½r lï¿½st, rï¿½kna ner tiden
         if (controlLocked)
         {
             controlLockTimer -= Time.fixedDeltaTime;
 
-            // När tiden är slut ge tillbaka kontrollen
+            // Nï¿½r tiden ï¿½r slut ge tillbaka kontrollen
             if (controlLockTimer <= 0f)
             {
                 controlLocked = false;
             }
 
-            return; // Hoppa över all rörelse medan låst
+            return; // Hoppa ï¿½ver all rï¿½relse medan lï¿½st
         }
 
         Vector3 tilt = Input.acceleration;
@@ -74,8 +74,12 @@ public class TiltControl : MonoBehaviour
         //#endif
 
     }
+    public Vector3 getLastVelocity()
+    {
+        return lastVelocity;
+    }
 
-    // Anropas när bollen ska "låsa controlls" en kort stund (t.ex. vid studs)
+    // Anropas nï¿½r bollen ska "lï¿½sa controlls" en kort stund (t.ex. vid studs)
     public void LockControl()
     {
         controlLocked = true;
