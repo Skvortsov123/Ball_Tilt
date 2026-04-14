@@ -6,33 +6,19 @@ public class BreakableWall : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         GameObject colliderObject = other.gameObject;
-        if (!playerCheck(colliderObject))
-        {
-            return;
-        }
-        if (enoughVelocity(colliderObject))
+        if (!colliderObject.CompareTag("Player")) return;
+
+        if (HasEnoughVelocity(colliderObject))
         {
             //TODO: effekt för att vägen går sönder
             Destroy(gameObject);
         }
     }
-
-    private bool playerCheck(GameObject o)
+    private bool HasEnoughVelocity(GameObject o)
     {
-        if (o.CompareTag("Player")) return true;
-        return false;
-    }
-
-    private bool enoughVelocity(GameObject o)
-    {
-
         Vector3 lastVelocity = o.GetComponent<TiltControl>().getLastVelocity();
         float deltaV = (o.GetComponent<Rigidbody>().linearVelocity - lastVelocity).magnitude;
-        if (deltaV > velocityToBreak)
-        {
-            return true;
-        }
-        return false;
+        return deltaV > velocityToBreak;
 
     }
 }
