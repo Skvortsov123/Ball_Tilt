@@ -159,9 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::gravityControl
   speed: 50
+  enableAccelerometer: 1
   offset: {x: 0, y: 0, z: 0}
-  keyboardControl: 1
-  controlLockDuration: 0.2
 --- !u!114 &6044394536692062664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d882f8dae5bae4b972ede05b5636f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hazardDetection
-  tiltControls: {fileID: 0}
   transition: {fileID: 3240813804223565110}
   spawnPosition: {fileID: 0}
 --- !u!114 &3240813804223565110

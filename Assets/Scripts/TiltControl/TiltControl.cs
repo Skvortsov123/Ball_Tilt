@@ -5,10 +5,10 @@ using System.Collections;
 public class TiltControl : MonoBehaviour
 {
     public float speed = 1f;
-    public bool enableJoystick;
+    public bool enableAccelerometer = true;
     public Vector3 offset;
-    public Joystick joystick;
 
+    private Joystick joystick;
     private Rigidbody rb;
     //private Vector3 control;    //Control of tilt, can be tilt, WASD, Joystick
     private Vector3 lastVelocity;
@@ -16,8 +16,8 @@ public class TiltControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = true; //true
         rb.interpolation = RigidbodyInterpolation.Interpolate;  // Makes ball render in higher (120) fps while physics has 50 tps, smooth graphics
+        joystick = FindFirstObjectByType<Joystick>();
     }
     
     void FixedUpdate()
@@ -42,16 +42,19 @@ public class TiltControl : MonoBehaviour
     
     public Vector3 getControl() //Can be Tilt, WASD, Joystick
     {
-        Vector3 control;
+        Vector3 control = Vector3.zero;
 
-        if (!enableJoystick)
+        if (enableAccelerometer)
         {   //Tilt
             Vector3 tilt = Input.acceleration;
             control = new Vector3(tilt.y, tilt.z, -tilt.x) + offset;
-        } else
-        {   //Joystick
-            control = new Vector3(joystick.getPosition().y, 0, -joystick.getPosition().x) / 4;
-        }   //Keyboard
+        }
+        //Joystick
+        if(joystick != null)
+        {
+            control += new Vector3(joystick.getPosition().y, 0, -joystick.getPosition().x) / 4;
+        }
+        //Keyboard
         control += Keyboard.getWASD() / 4;
 
         return control;
