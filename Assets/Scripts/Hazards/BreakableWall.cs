@@ -7,12 +7,13 @@ public class BreakableWall : MonoBehaviour
     {
         GameObject colliderObject = other.gameObject;
         if (!colliderObject.CompareTag("Player")) return;
-
+        
         if (HasEnoughVelocity(colliderObject))
         {
             //TODO: effekt för att vägen går sönder
             Destroy(gameObject);
         }
+        //TODO effekt om man inte har nog med speed
     }
     private bool HasEnoughVelocity(GameObject o)
     {
