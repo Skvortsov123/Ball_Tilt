@@ -19,14 +19,13 @@ public class TiltControl : MonoBehaviour
     // Hur länge kontrollen ska vara låst efter en bounce (justera vid behov)
     [SerializeField] float controlLockDuration = 0.2f;
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = true;
         rb.interpolation = RigidbodyInterpolation.Interpolate;  // Makes ball render in higher (120) fps while physics has 50 tps, smooth graphics
     }
-
+    
     void FixedUpdate()
     {
         // Om kontrollen är låst, räkna ner tiden
@@ -40,6 +39,7 @@ public class TiltControl : MonoBehaviour
                 controlLocked = false;
             }
 
+            print("controls are still locked");
             return; // Hoppa över all rörelse medan låst
         }
 
