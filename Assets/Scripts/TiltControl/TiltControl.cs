@@ -35,6 +35,10 @@ public class TiltControl : MonoBehaviour
             Vibration.Vibrate((int)deltaV*20);
         }
     }
+    public Vector3 getLastVelocity()
+    {
+        return lastVelocity;
+    }
     
     public Vector3 getControl() //Can be Tilt, WASD, Joystick
     {
