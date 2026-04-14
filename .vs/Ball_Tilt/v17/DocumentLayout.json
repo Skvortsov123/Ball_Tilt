@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alsv8121\\Documents\\GitHub\\Ball_Tilt\\",
+  "WorkspaceRootPath": "C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\alsv8121\\documents\\github\\ball_tilt\\assets\\scripts\\menu\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\saga\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\menu\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\saga\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\menu\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\alsv8121\\documents\\github\\ball_tilt\\assets\\scripts\\menu\\fallingball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\fallingball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\fallingball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,10 +27,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Options.cs",
+              "DocumentMoniker": "C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\Options.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\Options.cs",
+              "ToolTip": "C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\Options.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu\\Options.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T09:55:06.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainMenuController.cs",
-              "DocumentMoniker": "C:\\Users\\alsv8121\\Documents\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\MainMenuController.cs",
+              "DocumentMoniker": "C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\MainMenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\MainMenuController.cs",
-              "ToolTip": "C:\\Users\\alsv8121\\Documents\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\MainMenuController.cs",
+              "ToolTip": "C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\MainMenuController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Menu\\MainMenuController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -35,20 +52,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FallingBall.cs",
-              "DocumentMoniker": "C:\\Users\\alsv8121\\Documents\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\FallingBall.cs",
+              "DocumentMoniker": "C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\FallingBall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\FallingBall.cs",
-              "ToolTip": "C:\\Users\\alsv8121\\Documents\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\FallingBall.cs",
+              "ToolTip": "C:\\Users\\saga\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\FallingBall.cs",
               "RelativeToolTip": "Assets\\Scripts\\Menu\\FallingBall.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T11:07:31.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2026-04-10T11:07:31.755Z"
             }
           ]
         }

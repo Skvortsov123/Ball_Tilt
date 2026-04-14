@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5702235034278964326}
   - component: {fileID: 116103452439377848}
   - component: {fileID: 6044394536692062664}
-  - component: {fileID: -5457720651239146810}
   m_Layer: 0
   m_Name: Player Ball
   m_TagString: Untagged
@@ -157,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::gravityControl
   speed: 50
   offset: {x: 0, y: 0, z: 0}
-  keyboardControl: 0
+  keyboardControl: 1
   controlLockDuration: 0.2
 --- !u!114 &6044394536692062664
 MonoBehaviour:
@@ -172,16 +171,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hazardDetection
   spawnPosition: {fileID: 0}
---- !u!114 &-5457720651239146810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5077976731753534789}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1391bf77aea65f4391d99432b2d2718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BallBounce
-  bounceMultiplier: 10.16

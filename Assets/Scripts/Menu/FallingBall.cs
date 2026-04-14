@@ -36,7 +36,7 @@ public class FallingBall : MonoBehaviour
 
         teleportDelay = Random.Range(4f, 9f);
 
-        rb.gravityScale = Random.Range(20f, 40f);
+        rb.gravityScale = Random.Range(40f, 100f);
 
         // 3. Reset velocity so it doesn't keep falling fast immediately
         if (rb != null)
