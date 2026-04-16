@@ -22,6 +22,7 @@ public class FastMenu : MonoBehaviour
         joystick.SetActive(false);
         tiltControl.enabled = true;
         calibrateButton.interactable = true;
+        settingsPanel.SetActive(false);
     }
 
     public void toggleMenu()

@@ -2,16 +2,28 @@ using UnityEngine;
 using System.Collections;
 
 
+
 public class TiltControl : MonoBehaviour
 {
     public float speed = 1f;
     public bool enableAccelerometer = true;
-    public Vector3 offset;
+    public Vector3 offset; //only needed if manual numeric offset?
 
     private Joystick joystick;
     private Rigidbody rb;
     //private Vector3 control;    //Control of tilt, can be tilt, WASD, Joystick
     private Vector3 lastVelocity;
+
+    // Sensitivity & Deadzone
+    [Header("Tilt Settings")]
+    public float sensitivity = 1f;   // Multiplier for tilt strength
+    public float deadZone = 0.05f;  // Ignore small tilt noise
+
+    // Calibration offset
+    private Vector3 calibrationOffset = Vector3.zero;
+
+
+
 
     void Start()
     {
@@ -46,9 +58,24 @@ public class TiltControl : MonoBehaviour
         Vector3 control = Vector3.zero;
 
         if (enableAccelerometer)
-        {   //Tilt
+        {   // Original tilt
             Vector3 tilt = Input.acceleration;
+
+            //Apply calibration offset
+            tilt -= calibrationOffset;
+
+            //Original mapping
             control = new Vector3(tilt.y, tilt.z, -tilt.x) + offset;
+
+            //Apply sensitivity
+            control *= sensitivity;
+
+            //Apply deadzone
+            if (Mathf.Abs(control.x) < deadZone) control.x = 0;
+            if (Mathf.Abs(control.y) < deadZone) control.y = 0;
+            if (Mathf.Abs(control.z) < deadZone) control.z = 0;
+
+
         }
         //Joystick
         if(joystick != null)
@@ -60,6 +87,24 @@ public class TiltControl : MonoBehaviour
 
         return control;
     }
+
+    public void Calibrate()
+    {
+        calibrationOffset = Input.acceleration;
+    }
+
+    //Sensitivity slider hook
+    public void SetSensitivity(float value)
+    {
+        sensitivity = value;
+    }
+
+    //Deadzone slider hook
+    public void SetDeadZone(float value)
+    {
+        deadZone = value;
+    }
+
 }
 
 public static class Keyboard
