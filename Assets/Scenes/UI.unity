@@ -143,7 +143,6 @@ GameObject:
   - component: {fileID: 50579095}
   - component: {fileID: 50579094}
   - component: {fileID: 50579096}
-  - component: {fileID: 50579097}
   m_Layer: 5
   m_Name: Control
   m_TagString: Untagged
@@ -264,22 +263,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &50579097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50579092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33945caf290ed854dad1d74146f9747a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControlToggle
-  joystick: {fileID: 5164305875280136539}
-  calibrateButton: {fileID: 257287602}
-  tiltControl: {fileID: 116103452439377848, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
-  joystickActive: 0
 --- !u!1 &72608265
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +424,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.198
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1076,7 +1059,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.848
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2104,7 +2087,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.198
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

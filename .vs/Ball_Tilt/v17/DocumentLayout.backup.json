@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\Audio Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Menu\\Audio Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\Audio Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Menu\\Audio Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\fastmenu\\fastmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Audio Manager.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\Audio Manager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\Audio Manager.cs",
@@ -137,15 +137,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TiltControl.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\TiltControl\\TiltControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TiltControl\\TiltControl.cs",
               "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\TiltControl\\TiltControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\TiltControl\\TiltControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAA9wAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T08:38:38.743Z"
+              "WhenOpened": "2026-04-14T08:38:38.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -161,7 +161,7 @@ MonoBehaviour:
   speed: 50
   enableAccelerometer: 1
   offset: {x: 0, y: 0, z: 0}
-  sensitivity: 0
+  sensitivity: 1
   deadZone: 0
 --- !u!114 &6044394536692062664
 MonoBehaviour:

@@ -19,8 +19,7 @@ public class TiltControl : MonoBehaviour
     public float sensitivity = 1f;   // Multiplier for tilt strength
     public float deadZone = 0.05f;  // Ignore small tilt noise
 
-    // Calibration offset
-    private Vector3 calibrationOffset = Vector3.zero;
+   
 
 
 
@@ -35,7 +34,7 @@ public class TiltControl : MonoBehaviour
     
     void FixedUpdate()
     {        
-        rb.AddForce(getControl() * speed * rb.mass);
+        rb.AddForce(getControl() * (speed*sensitivity) * rb.mass);
         chechImpactVibration();
     }
 
@@ -61,14 +60,12 @@ public class TiltControl : MonoBehaviour
         {   // Original tilt
             Vector3 tilt = Input.acceleration;
 
-            //Apply calibration offset
-            tilt -= calibrationOffset;
+           
+            // tilt -= calibrationOffset;
 
             //Original mapping
             control = new Vector3(tilt.y, tilt.z, -tilt.x) + offset;
 
-            //Apply sensitivity
-            control *= sensitivity;
 
             //Apply deadzone
             if (Mathf.Abs(control.x) < deadZone) control.x = 0;
@@ -90,19 +87,22 @@ public class TiltControl : MonoBehaviour
 
     public void Calibrate()
     {
-        calibrationOffset = Input.acceleration;
+        offset = Input.acceleration;
+        Debug.Log("Calibration offset set to: " + offset);
     }
 
     //Sensitivity slider hook
     public void SetSensitivity(float value)
     {
         sensitivity = value;
+        Debug.Log("Sensitivity set to: " + sensitivity);
     }
 
     //Deadzone slider hook
     public void SetDeadZone(float value)
     {
         deadZone = value;
+        Debug.Log("DeadZone set to: " + deadZone);
     }
 
 }
