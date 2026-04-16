@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8214540177079739403}
   - component: {fileID: 97556976069976379}
   - component: {fileID: 483082766113443478}
-  - component: {fileID: 755791155096387200}
+  - component: {fileID: 3343867308579282889}
   - component: {fileID: 4575579371106614005}
   m_Layer: 0
   m_Name: Finish Hole
@@ -92,8 +92,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &755791155096387200
-BoxCollider:
+--- !u!135 &3343867308579282889
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -111,8 +111,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33, y: 0.5, z: 0.33}
-  m_Center: {x: 0, y: 1.46, z: 0}
+  m_Radius: 0.3
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &4575579371106614005
 MonoBehaviour:
   m_ObjectHideFlags: 0

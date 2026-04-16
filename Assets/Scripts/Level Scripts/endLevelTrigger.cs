@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Rendering.Universal;
@@ -5,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class endLevelTrigger : MonoBehaviour
 {
-    [SerializeField] private int nextSceneIs;
+    [SerializeField] private String nextSceneIs;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,7 @@ public class endLevelTrigger : MonoBehaviour
 
     private void ChangeLevel()
     {
-        SceneManager.LoadScene(nextSceneIs);
+        SceneManager.LoadScene(nextSceneIs, LoadSceneMode.Single);
     }
+
 }

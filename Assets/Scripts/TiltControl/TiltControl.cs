@@ -5,52 +5,66 @@ using System.Collections;
 public class TiltControl : MonoBehaviour
 {
     public float speed = 1f;
+    public bool enableAccelerometer = true;
     public Vector3 offset;
-    public bool keyboardControl;
 
-    private Vector2 moveInput;
+    private Joystick joystick;
     private Rigidbody rb;
+    //private Vector3 control;    //Control of tilt, can be tilt, WASD, Joystick
     private Vector3 lastVelocity;
-
-    // Håller koll på om spelaren tillfälligt inte får styra bollen
-    private bool controlLocked = false;
-    // Timer för hur länge kontrollen ska vara låst (starta den på 0)
-    private float controlLockTimer = 0f;
-    // Hur länge kontrollen ska vara låst efter en bounce (justera vid behov)
-    [SerializeField] float controlLockDuration = 0.2f;
-
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = true;
         rb.interpolation = RigidbodyInterpolation.Interpolate;  // Makes ball render in higher (120) fps while physics has 50 tps, smooth graphics
+        joystick = FindFirstObjectByType<Joystick>();
+        print("joystick " + joystick);
     }
-
+    
     void FixedUpdate()
-    {
-        // Om kontrollen är låst, räkna ner tiden
-        if (controlLocked)
-        {
-            controlLockTimer -= Time.fixedDeltaTime;
-
-            // När tiden är slut ge tillbaka kontrollen
-            if (controlLockTimer <= 0f)
-            {
-                controlLocked = false;
-            }
-
-            return; // Hoppa över all rörelse medan låst
-        }
-
-        Vector3 tilt = Input.acceleration;
-        rb.AddForce((new Vector3(tilt.y, tilt.z, -tilt.x) + offset ) * speed * rb.mass);
-        if (keyboardControl)
-            keyboard();
-        vibrate();
+    {        
+        rb.AddForce(getControl() * speed * rb.mass);
+        chechImpactVibration();
     }
 
-    void keyboard()
+    void chechImpactVibration()
+    {
+        float deltaV = (rb.linearVelocity - lastVelocity).magnitude;
+        lastVelocity = rb.linearVelocity;
+
+        if(deltaV > 1) {
+            Vibration.Vibrate((int)deltaV*20);
+        }
+    }
+    public Vector3 getLastVelocity()
+    {
+        return lastVelocity;
+    }
+    
+    public Vector3 getControl() //Can be Tilt, WASD, Joystick
+    {
+        Vector3 control = Vector3.zero;
+
+        if (enableAccelerometer)
+        {   //Tilt
+            Vector3 tilt = Input.acceleration;
+            control = new Vector3(tilt.y, tilt.z, -tilt.x) + offset;
+        }
+        //Joystick
+        if(joystick != null)
+        {
+            control += new Vector3(joystick.getPosition().y, 0, -joystick.getPosition().x) / 4;
+        }
+        //Keyboard
+        control += Keyboard.getWASD() / 4;
+
+        return control;
+    }
+}
+
+public static class Keyboard
+{
+    public static Vector3 getWASD()
     {
         Vector3 move = Vector3.zero;
 
@@ -59,35 +73,11 @@ public class TiltControl : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) move += Vector3.forward;
         if (Input.GetKey(KeyCode.D)) move += Vector3.back;
 
-        rb.AddForce(move * speed/4);
+        return move;
     }
-
-    void vibrate()
-    {
-        float deltaV = (rb.linearVelocity - lastVelocity).magnitude;
-        lastVelocity = rb.linearVelocity;
-
-        //#if UNITY_ANDROID && !UNITY_EDITOR
-        if(deltaV > 1) {
-            Vibration.Vibrate((int)deltaV*20);
-        }
-        //#endif
-
-    }
-
-    // Anropas när bollen ska "låsa controlls" en kort stund (t.ex. vid studs)
-    public void LockControl()
-    {
-        controlLocked = true;
-        controlLockTimer = controlLockDuration;
-    }
-
-
 }
 
-
-
-public static class Vibration   // Works on android, copied from website
+public static class Vibration   // Vibration on android, copied from website
 {
 
 #if UNITY_ANDROID && !UNITY_EDITOR

@@ -1,12 +1,16 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Rendering.Universal;
 
 public class hazardDetection : MonoBehaviour
 {
+    [SerializeField] private TransitionManager transition;
     [SerializeField] private Transform spawnPosition;
 
     private Rigidbody rb;
+
+    private bool isRespawning = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,15 +20,24 @@ public class hazardDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Hole Hazard"))
+        if (other.CompareTag("Hole Hazard") && !isRespawning)
         {
-            Respawn();
+            StartCoroutine(Respawn());
+            isRespawning = true;
         }
     }
-
-    private void Respawn()
+    
+    IEnumerator Respawn()
     {
+        transition.ActivateHazardHoleDeathAnimation();
+
+        rb.isKinematic = true; // freezes the ball
+
+        yield return new WaitForSeconds(1.4f);
         transform.position = spawnPosition.position;
-        rb.linearVelocity = Vector3.zero;
+
+        rb.isKinematic = false;
+
+        isRespawning = false;
     }
 }
