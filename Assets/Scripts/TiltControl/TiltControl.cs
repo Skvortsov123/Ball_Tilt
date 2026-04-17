@@ -40,7 +40,8 @@ public class TiltControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(getControl() * (speed * sensitivity) * rb.mass);
+        rb.AddForce(getControl() * speed * Mathf.Pow(sensitivity, 2) * rb.mass);
+        //rb.AddForce(getControl() * (speed * sensitivity) * rb.mass);
         chechImpactVibration();
     }
 
@@ -110,8 +111,8 @@ public class TiltControl : MonoBehaviour
     //Deadzone slider hook
     public void SetDeadZone(float value)
     {
-        deadZone = value;
-        GameSettings.deadZone = value;
+        deadZone = value * 0.2f; // scale slider to usable range
+        GameSettings.deadZone = deadZone;
         Debug.Log("DeadZone set to: " + deadZone);
     }
 

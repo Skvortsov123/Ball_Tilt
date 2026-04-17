@@ -635,8 +635,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 116103452439377848, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
-        m_TargetAssemblyTypeName: TiltControl, Assembly-CSharp
+      - m_Target: {fileID: 377341056}
+        m_TargetAssemblyTypeName: FastMenu, Assembly-CSharp
         m_MethodName: Calibrate
         m_Mode: 1
         m_Arguments:
@@ -971,8 +971,8 @@ MonoBehaviour:
   joystick: {fileID: 5164305875280136539}
   tiltControl: {fileID: 116103452439377848, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
   calibrateButton: {fileID: 257287602}
-  sensitivitySlider: {fileID: 0}
-  deadzoneSlider: {fileID: 0}
+  sensitivitySlider: {fileID: 2102162281}
+  deadzoneSlider: {fileID: 1385224483}
   settingsPanel: {fileID: 1795301242}
   fastMenu: {fileID: 377341049}
 --- !u!1 &421769300
@@ -2283,16 +2283,16 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1532868079}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.05
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 377341056}
         m_TargetAssemblyTypeName: FastMenu, Assembly-CSharp
         m_MethodName: SetDeadZone
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2799,17 +2799,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 72608266}
   m_HandleRect: {fileID: 1577582252}
   m_Direction: 0
-  m_MinValue: 0.1
-  m_MaxValue: 1
+  m_MinValue: 0.3
+  m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 0.1
+  m_Value: 1.071
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 377341056}
         m_TargetAssemblyTypeName: FastMenu, Assembly-CSharp
         m_MethodName: SetSensitivity
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -25,7 +25,9 @@ public class FastMenu : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        tiltControl = FindFirstObjectByType<TiltControl>();
+        tiltControl = GameObject.FindGameObjectWithTag("Player")
+                        .GetComponent<TiltControl>();
+        Debug.Log("TiltControl found: " + tiltControl); 
 
         joystickActive = GameSettings.useJoystick;
 
@@ -68,6 +70,21 @@ public class FastMenu : MonoBehaviour
         Debug.Log("Joystick Active: " + joystickActive);
     }
 
+    public void Calibrate()
+    {
+        var tiltControl = GameObject.FindGameObjectWithTag("Player")
+                                   .GetComponent<TiltControl>();
+
+        if (tiltControl != null)
+        {
+            tiltControl.Calibrate();
+            Debug.Log("Calibration triggered on: " + tiltControl.name);
+        }
+        else
+        {
+            Debug.LogWarning("No TiltControl found!");
+        }
+    }
 
     public void OpenSettings()
     {
@@ -87,6 +104,7 @@ public class FastMenu : MonoBehaviour
 
     public void SetSensitivity(float value)
     {
+        
         tiltControl.SetSensitivity(value);
     }
 

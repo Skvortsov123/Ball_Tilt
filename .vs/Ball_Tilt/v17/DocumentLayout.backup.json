@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\menu\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\fastmenu\\fastmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fastmenu\\fastmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\player ball\\playersoundscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player ball\\playersoundscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\menu\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\joystick\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,13 +58,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "GameSettings.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\GameSettings.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\GameSettings.cs",
               "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\GameSettings.cs",
               "RelativeToolTip": "Assets\\Scripts\\Menu\\GameSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T17:57:27.325Z",
               "EditorCaption": ""
@@ -77,22 +77,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\AudioManager.cs",
               "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\AudioManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Menu\\AudioManager.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T17:47:21.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FastMenu.cs",
-              "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\FastMenu\\FastMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FastMenu\\FastMenu.cs",
-              "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\FastMenu\\FastMenu.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FastMenu\\FastMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:19:20.261Z",
               "EditorCaption": ""
             },
             {
@@ -105,8 +92,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Joystick\\Joystick.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T14:45:12.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T14:45:12.948Z"
             },
             {
               "$type": "Document",
@@ -134,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "playerSoundScript.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Player Ball\\playerSoundScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Ball\\playerSoundScript.cs",
@@ -142,18 +128,30 @@
               "RelativeToolTip": "Assets\\Scripts\\Player Ball\\playerSoundScript.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAwwDYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T08:38:09.28Z",
+              "WhenOpened": "2026-04-14T08:38:09.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FastMenu.cs",
+              "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\FastMenu\\FastMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FastMenu\\FastMenu.cs",
+              "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\FastMenu\\FastMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FastMenu\\FastMenu.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T15:19:20.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TiltControl.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\TiltControl\\TiltControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TiltControl\\TiltControl.cs",
               "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\TiltControl\\TiltControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\TiltControl\\TiltControl.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAcwLMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-14T08:38:38.743Z",
               "EditorCaption": ""
