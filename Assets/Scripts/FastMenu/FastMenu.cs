@@ -11,6 +11,9 @@ public class FastMenu : MonoBehaviour
     public Button calibrateButton;
     public Slider sensitivitySlider;
     public Slider deadzoneSlider;
+    public Slider musicSlider;
+    public Slider volumeSlider;
+
 
 
     private bool joystickActive = false;
@@ -42,6 +45,8 @@ public class FastMenu : MonoBehaviour
 
         sensitivitySlider.value = GameSettings.sensitivity;
         deadzoneSlider.value = GameSettings.deadZone;
+        musicSlider.value = GameSettings.musicVolume;
+        volumeSlider.value = GameSettings.sfxVolume;
     }
 
 

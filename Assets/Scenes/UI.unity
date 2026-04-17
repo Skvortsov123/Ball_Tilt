@@ -973,6 +973,8 @@ MonoBehaviour:
   calibrateButton: {fileID: 257287602}
   sensitivitySlider: {fileID: 2102162281}
   deadzoneSlider: {fileID: 1385224483}
+  musicSlider: {fileID: 421769302}
+  volumeSlider: {fileID: 153933889}
   settingsPanel: {fileID: 1795301242}
   fastMenu: {fileID: 377341049}
 --- !u!1 &421769300

@@ -33,6 +33,7 @@ public class TiltControl : MonoBehaviour
         print("joystick " + joystick);
 
 
+        offset = GameSettings.calibrationOffset;
         sensitivity = GameSettings.sensitivity;
         deadZone = GameSettings.deadZone;
 
@@ -96,8 +97,10 @@ public class TiltControl : MonoBehaviour
     {
         Vector3 tilt = Input.acceleration;
         offset = new Vector3(tilt.y, tilt.z, -tilt.x);
+        GameSettings.calibrationOffset = offset;
 
-        Debug.Log("Calibration offset set to: " + offset);
+
+
     }
 
     //Sensitivity slider hook
@@ -105,7 +108,7 @@ public class TiltControl : MonoBehaviour
     {
         sensitivity = value;
         GameSettings.sensitivity = value;
-        Debug.Log("Sensitivity set to: " + sensitivity);
+
     }
 
     //Deadzone slider hook
@@ -113,7 +116,7 @@ public class TiltControl : MonoBehaviour
     {
         deadZone = value * 0.2f; // scale slider to usable range
         GameSettings.deadZone = deadZone;
-        Debug.Log("DeadZone set to: " + deadZone);
+
     }
 
 }
