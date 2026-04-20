@@ -969,6 +969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastMenu
   joystick: {fileID: 5164305875280136539}
+  sliderUI: {fileID: 1362288726}
   tiltControl: {fileID: 116103452439377848, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
   calibrateButton: {fileID: 257287602}
   sensitivitySlider: {fileID: 2102162281}
@@ -977,6 +978,10 @@ MonoBehaviour:
   volumeSlider: {fileID: 153933889}
   settingsPanel: {fileID: 1795301242}
   fastMenu: {fileID: 377341049}
+  controlButtonImage: {fileID: 50579094}
+  tiltIcon: {fileID: 21300000, guid: 71fcbaac693229c4588e1fd13c0e46fa, type: 3}
+  joystickIcon: {fileID: 21300000, guid: 0acf1021ea6b52963a753d95e604278c, type: 3}
+  sliderIcon: {fileID: 21300000, guid: b1bf030b9ab30f748967da7c4b113571, type: 3}
 --- !u!1 &421769300
 GameObject:
   m_ObjectHideFlags: 0
