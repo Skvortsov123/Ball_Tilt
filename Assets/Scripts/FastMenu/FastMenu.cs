@@ -7,6 +7,8 @@ public class FastMenu : MonoBehaviour
 
     [Header("Control Mode")]
     public GameObject joystick;
+    public GameObject sliderUI; 
+
     public TiltControl tiltControl;
     public Button calibrateButton;
     public Slider sensitivitySlider;
@@ -14,14 +16,17 @@ public class FastMenu : MonoBehaviour
     public Slider musicSlider;
     public Slider volumeSlider;
 
-
-
-    private bool joystickActive = false;
+    // private bool joystickActive = false;
 
     [Header("Menus")]
     public GameObject settingsPanel;
     public GameObject fastMenu;
 
+    [Header("Control Icons")]
+public Image controlButtonImage; 
+    public Sprite tiltIcon;         
+    public Sprite joystickIcon;     
+    public Sprite sliderIcon;       
 
 
     public void Start()
@@ -30,16 +35,12 @@ public class FastMenu : MonoBehaviour
 
         tiltControl = GameObject.FindGameObjectWithTag("Player")
                         .GetComponent<TiltControl>();
-        Debug.Log("TiltControl found: " + tiltControl); 
 
-        joystickActive = GameSettings.useJoystick;
+        Debug.Log("TiltControl found: " + tiltControl);
 
-        joystick.SetActive(joystickActive);
+        // joystickActive = GameSettings.useJoystick; 
 
-        tiltControl.useTilt = !joystickActive;
-        tiltControl.useJoystick = joystickActive;
-
-        calibrateButton.interactable = !joystickActive;
+        UpdateControlUI(); // uppdatera UI baserat på mode
 
         settingsPanel.SetActive(false);
 
@@ -49,7 +50,6 @@ public class FastMenu : MonoBehaviour
         volumeSlider.value = GameSettings.sfxVolume;
     }
 
-
     public void toggleMenu()
     {
         animator.SetTrigger("Toggle");
@@ -57,22 +57,46 @@ public class FastMenu : MonoBehaviour
 
     public void toggleControl()
     {
-        // Toggle the state
-        joystickActive = !joystickActive;
+        switch (GameSettings.controlMode) // rotera mellan 3 lägen
+        {
+            case ControlMode.Tilt:
+                GameSettings.controlMode = ControlMode.Joystick;
+                break;
 
-        GameSettings.useJoystick = joystickActive;
+            case ControlMode.Joystick:
+                GameSettings.controlMode = ControlMode.Slider;
+                break;
 
-        // Show/hide joystick
-        joystick.SetActive(joystickActive);
+            case ControlMode.Slider:
+                GameSettings.controlMode = ControlMode.Tilt;
+                break;
+        }
 
-        // Switch input modes
-        tiltControl.useTilt = !joystickActive;
-        tiltControl.useJoystick = joystickActive;
+        UpdateControlUI(); // uppdatera UI efter byte
+    }
 
-        // Enable/disable calibrate button
-        calibrateButton.interactable = !joystickActive;
+    void UpdateControlUI()
+    {
+        joystick.SetActive(GameSettings.controlMode == ControlMode.Joystick);
+        sliderUI.SetActive(GameSettings.controlMode == ControlMode.Slider);
 
-        Debug.Log("Joystick Active: " + joystickActive);
+        calibrateButton.interactable = (GameSettings.controlMode == ControlMode.Tilt);
+
+        // byt ikon beroende på läge
+        switch (GameSettings.controlMode)
+        {
+            case ControlMode.Tilt:
+                controlButtonImage.sprite = tiltIcon;
+                break;
+
+            case ControlMode.Joystick:
+                controlButtonImage.sprite = joystickIcon;
+                break;
+
+            case ControlMode.Slider:
+                controlButtonImage.sprite = sliderIcon;
+                break;
+        }
     }
 
     public void Calibrate()
@@ -109,7 +133,6 @@ public class FastMenu : MonoBehaviour
 
     public void SetSensitivity(float value)
     {
-        
         tiltControl.SetSensitivity(value);
     }
 
@@ -117,5 +140,4 @@ public class FastMenu : MonoBehaviour
     {
         tiltControl.SetDeadZone(value);
     }
-
 }
