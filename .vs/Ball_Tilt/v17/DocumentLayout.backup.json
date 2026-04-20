@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\leon\\Documents\\Github\\Unity\\Ball_Tilt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\leon\\documents\\github\\unity\\ball_tilt\\assets\\scripts\\player ball\\hazarddetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player ball\\hazarddetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\leon\\Documents\\Github\\Unity\\Ball_Tilt\\assets\\scripts\\hazards\\sandslowdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hazards\\sandslowdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\leon\\documents\\github\\unity\\ball_tilt\\assets\\scripts\\hazards\\sandslowdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hazards\\sandslowdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\leon\\documents\\github\\unity\\ball_tilt\\assets\\scripts\\player ball\\hazarddetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player ball\\hazarddetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "hazardDetection.cs",
               "DocumentMoniker": "C:\\Users\\leon\\Documents\\Github\\Unity\\Ball_Tilt\\Assets\\Scripts\\Player Ball\\hazardDetection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Ball\\hazardDetection.cs",
@@ -35,13 +35,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SandSlowdown.cs",
               "DocumentMoniker": "C:\\Users\\leon\\Documents\\Github\\Unity\\Ball_Tilt\\Assets\\Scripts\\Hazards\\SandSlowdown.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Hazards\\SandSlowdown.cs",
               "ToolTip": "C:\\Users\\leon\\Documents\\Github\\Unity\\Ball_Tilt\\Assets\\Scripts\\Hazards\\SandSlowdown.cs",
               "RelativeToolTip": "Assets\\Scripts\\Hazards\\SandSlowdown.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T12:46:49.268Z",
               "EditorCaption": ""

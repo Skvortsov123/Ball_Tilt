@@ -11,5 +11,13 @@ public class SandSlowdown : MonoBehaviour
             
         }
     }
+    private void OnTriggerExit(Collider other) // resetta dampening
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<Rigidbody>().linearDamping = 0.5f;
+
+        }
+    }
 
 }
