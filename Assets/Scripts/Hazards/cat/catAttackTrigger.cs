@@ -7,7 +7,7 @@ public class catAttackTrigger : MonoBehaviour
     private float currentTimer;
     private float delayTimer = 0.2f;
     private bool runDelayTimer = false;
-    private bool playerInside = false;
+
     private void Start()
     {
         currentTimer = timer;
@@ -15,7 +15,7 @@ public class catAttackTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        playerInside = true;
+
         runDelayTimer = false;
         delayTimer = 0.2f;
     }
@@ -24,7 +24,7 @@ public class catAttackTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        playerInside = false;
+
         runDelayTimer = true;
     }
     private void OnTriggerStay(Collider other)
@@ -45,7 +45,7 @@ public class catAttackTrigger : MonoBehaviour
         Instantiate(pawPrefab, transform.position, transform.rotation);
     }
 
-     private void Update()
+    private void Update()
     {
         if (!runDelayTimer) return;
 
@@ -53,8 +53,8 @@ public class catAttackTrigger : MonoBehaviour
         if (delayTimer <= 0)
         {
             delayTimer = 0.2f;
-            currentTimer = timer;  
-            runDelayTimer = false;      
+            currentTimer = timer;
+            runDelayTimer = false;
         }
     }
 }
