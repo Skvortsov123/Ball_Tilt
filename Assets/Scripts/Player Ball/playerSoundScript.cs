@@ -49,6 +49,22 @@ public class playerSoundScript : MonoBehaviour
                 audioSource.volume = GetDynamicVolume() * GameSettings.sfxVolume * volumeMultiplier;
                 audioSource.PlayOneShot(ballCollisionSFX);
             }
+
+            //bollkollision = deathljud
+            if (collision.gameObject.GetComponent<hazardDetection>() != null && !isRespawning)
+            {
+                // endast huvudspelaren spelar death-ljud
+                if (isMainPlayer)
+                {
+                    audioSource.volume = 0.6f * GameSettings.sfxVolume;
+                    audioSource.PlayOneShot(playerDeathSFX);
+                }
+
+                isRespawning = true;
+                StartCoroutine(RespawnCooldown());
+            }
+
+
         }
     }
 
@@ -58,14 +74,10 @@ public class playerSoundScript : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Hole Hazard") && !isRespawning)
             {
-                
 
-                // endast huvudspelare spelar death-ljud
-                if (isMainPlayer)
-                {
-                    audioSource.volume = 0.6f * GameSettings.sfxVolume;
-                    audioSource.PlayOneShot(playerDeathSFX);
-                }
+
+                audioSource.volume = 0.6f * GameSettings.sfxVolume;
+                audioSource.PlayOneShot(playerDeathSFX);
 
                 isRespawning = true;
                 StartCoroutine(RespawnCooldown());

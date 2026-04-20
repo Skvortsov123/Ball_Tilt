@@ -7,38 +7,36 @@ public class FastMenu : MonoBehaviour
 
     [Header("Control Mode")]
     public GameObject joystick;
-    public GameObject sliderUI; 
+    public GameObject sliderUI;
 
-    public TiltControl tiltControl;
+    // public TiltControl tiltControl;
+    public TiltControl[] tiltControls; // NYTT: stöd för flera bollar
+
     public Button calibrateButton;
     public Slider sensitivitySlider;
     public Slider deadzoneSlider;
     public Slider musicSlider;
     public Slider volumeSlider;
 
-    // private bool joystickActive = false;
-
     [Header("Menus")]
     public GameObject settingsPanel;
     public GameObject fastMenu;
 
     [Header("Control Icons")]
-public Image controlButtonImage; 
-    public Sprite tiltIcon;         
-    public Sprite joystickIcon;     
-    public Sprite sliderIcon;       
-
+    public Image controlButtonImage;
+    public Sprite tiltIcon;
+    public Sprite joystickIcon;
+    public Sprite sliderIcon;
 
     public void Start()
     {
         animator = GetComponent<Animator>();
 
-        tiltControl = GameObject.FindGameObjectWithTag("Player")
-                        .GetComponent<TiltControl>();
+        // tiltControl = GameObject.FindGameObjectWithTag("Player")
+        //                 .GetComponent<TiltControl>();
 
-        Debug.Log("TiltControl found: " + tiltControl);
-
-        // joystickActive = GameSettings.useJoystick; 
+        tiltControls = FindObjectsByType<TiltControl>(FindObjectsSortMode.None); // NYTT: hämta alla bollar
+        Debug.Log("TiltControls found: " + tiltControls.Length);
 
         UpdateControlUI(); // uppdatera UI baserat på mode
 
@@ -101,17 +99,13 @@ public Image controlButtonImage;
 
     public void Calibrate()
     {
-        var tiltControl = GameObject.FindGameObjectWithTag("Player")
-                                   .GetComponent<TiltControl>();
+        // var tiltControl = GameObject.FindGameObjectWithTag("Player")
+        //                            .GetComponent<TiltControl>();
 
-        if (tiltControl != null)
+        foreach (var tc in tiltControls) // NYTT: kalibrera alla
         {
-            tiltControl.Calibrate();
-            Debug.Log("Calibration triggered on: " + tiltControl.name);
-        }
-        else
-        {
-            Debug.LogWarning("No TiltControl found!");
+            tc.Calibrate();
+            Debug.Log("Calibration triggered on: " + tc.name);
         }
     }
 
@@ -133,11 +127,21 @@ public Image controlButtonImage;
 
     public void SetSensitivity(float value)
     {
-        tiltControl.SetSensitivity(value);
+        // tiltControl.SetSensitivity(value);
+
+        foreach (var tc in tiltControls) // NYTT: ändra alla
+        {
+            tc.SetSensitivity(value);
+        }
     }
 
     public void SetDeadZone(float value)
     {
-        tiltControl.SetDeadZone(value);
+        // tiltControl.SetDeadZone(value);
+
+        foreach (var tc in tiltControls) // NYTT: ändra alla
+        {
+            tc.SetDeadZone(value);
+        }
     }
 }

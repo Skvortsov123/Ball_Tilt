@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8549053197512563993}
   - component: {fileID: 773767232276539050}
   - component: {fileID: 7956391112179192014}
+  - component: {fileID: 3925901355035572784}
   m_Layer: 0
   m_Name: Tilting Camera
   m_TagString: MainCamera
@@ -152,3 +153,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TiltCamera
   speed: 2
   amplitude: 10
+--- !u!95 &3925901355035572784
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4377029072596409190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3a44df65995b164f8c6cbd9c8250320, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

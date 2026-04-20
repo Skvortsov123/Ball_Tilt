@@ -7,10 +7,11 @@ public class SliderControl : MonoBehaviour
 
     public void OnEnable()
     {
-        TiltControl tiltControl = FindFirstObjectByType<TiltControl>();
-        if(tiltControl != null)
+        var tiltControls = FindObjectsByType<TiltControl>(FindObjectsSortMode.None);
+
+        foreach (var tc in tiltControls)
         {
-            tiltControl.SetSliderControl(this);
+            tc.SetSliderControl(this);
         }
     }
 

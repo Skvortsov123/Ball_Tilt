@@ -163,8 +163,6 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   sensitivity: 1
   deadZone: 0
-  useTilt: 1
-  useJoystick: 0
   enableVibration: 1
 --- !u!114 &4898894593070948088
 MonoBehaviour:
@@ -182,6 +180,7 @@ MonoBehaviour:
   spawnPosition: {fileID: 0}
   hazardTags:
   - Hole Hazard
+  - Player
 --- !u!114 &774815169193171297
 MonoBehaviour:
   m_ObjectHideFlags: 0
