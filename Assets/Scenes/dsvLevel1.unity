@@ -2825,7 +2825,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4575579371106614005, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
       propertyPath: nextSceneIs
-      value: dsvLevel2
+      value: mainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7873870728241069819, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
       propertyPath: m_Name

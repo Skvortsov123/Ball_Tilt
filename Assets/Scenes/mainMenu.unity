@@ -3041,7 +3041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fda47d7d56f5f54bb6805460f58e1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadSceneButton
-  sceneName: ..
+  sceneName: DsvLevel1
 --- !u!1001 &8737857592565818073
 PrefabInstance:
   m_ObjectHideFlags: 0
