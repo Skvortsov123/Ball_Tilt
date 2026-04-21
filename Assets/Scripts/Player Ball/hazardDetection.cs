@@ -61,12 +61,20 @@ public class hazardDetection : MonoBehaviour
     {
         transition.ActivateHazardHoleDeathAnimation();
 
-        rb.isKinematic = true; // freezes the ball
+        //rb.isKinematic = true;
 
-        yield return new WaitForSeconds(1.4f);
-        transform.position = spawnPosition.position;
+      
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        
 
-        rb.isKinematic = false;
+        yield return new WaitForSeconds(1.2f);
+
+        rb.MovePosition(spawnPosition.position);
+
+        yield return new WaitForFixedUpdate(); 
+
+        //rb.isKinematic = false;
 
         isRespawning = false;
     }
