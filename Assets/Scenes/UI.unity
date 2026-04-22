@@ -827,7 +827,7 @@ RectTransform:
   m_GameObject: {fileID: 377341049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 1.142132, z: 1.5228428}
+  m_LocalScale: {x: 8.257533, y: 1.5718654, z: 2.095821}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 50579093}
@@ -837,7 +837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 141.2, y: -112.56958}
+  m_AnchoredPosition: {x: 191, y: -168}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377341051
@@ -2256,6 +2256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b0f6faf9cbbae4ebe1ebe9d58dba2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderControl
+  xSlider: {fileID: 8189849030505152213}
+  ySlider: {fileID: 1895461890}
 --- !u!1 &1385224481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,6 +2844,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3319510954587418152, guid: 0ff4030ad02061ae5b39cf04c28baeef, type: 3}
   m_PrefabInstance: {fileID: 1895461888}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1895461890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8949535434990158073, guid: 0ff4030ad02061ae5b39cf04c28baeef, type: 3}
+  m_PrefabInstance: {fileID: 1895461888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1 &1905454879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,6 +3491,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ff4030ad02061ae5b39cf04c28baeef, type: 3}
+--- !u!114 &8189849030505152213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8949535434990158073, guid: 0ff4030ad02061ae5b39cf04c28baeef, type: 3}
+  m_PrefabInstance: {fileID: 8189849030505152212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

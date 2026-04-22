@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class SliderControl : MonoBehaviour
 {
     float x;
     float y;
+    public Slider xSlider;
+    public Slider ySlider;
 
     public void OnEnable()
     {
@@ -13,6 +17,15 @@ public class SliderControl : MonoBehaviour
         {
             tc.SetSliderControl(this);
         }
+    }
+
+    public void ResetToCenter()
+    {
+        // Sätt input till mitten (ingen rörelse)
+        x = 0f;
+        y = 0f;
+        if (xSlider != null) xSlider.value = 0f;
+        if (ySlider != null) ySlider.value = 0f;
     }
 
     public void SetX(float x)

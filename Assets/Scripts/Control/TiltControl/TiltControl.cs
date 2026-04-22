@@ -89,24 +89,16 @@ public class TiltControl : MonoBehaviour
                     Vector3 raw = new Vector3(tilt.y, 0, -tilt.x) - new Vector3(offset.x, 0, offset.z);
 
                     // 2. Räkna ut hur mycket telefonen lutar (styrka)
-                    float magnitude = raw.magnitude;
+                    // --- NY KOD ---
+                    // Deadzone + sensitivity per axel (fixar asymmetri fram/bak)
 
-                    if (magnitude < deadZone)
-                    {
-                        // Under deadzone = ingen input alls
-                        raw = Vector3.zero;
-                    }
-                    else
-                    {
-                        // 3. Skala om så att värdet börjar från 0 efter deadzone
-                        float adjusted = (magnitude - deadZone) / (1f - deadZone);
 
-                        // 4. Sensitivity påverkar hur snabbt input växer (inte maxvärde)
-                        adjusted = Mathf.Pow(adjusted, 1f / sensitivity);
 
-                        // 5. Återställ riktning med ny styrka (0–1)
-                        raw = raw.normalized * adjusted;
-                    }
+                    // X-axis
+                    raw.x = ApplyDeadzoneAndSensitivity(raw.x);
+
+                    // Z-axis
+                    raw.z = ApplyDeadzoneAndSensitivity(raw.z);
 
                     // 6. Sätt slutlig kontroll (max alltid 1, oberoende av sensitivity)
                     control = raw;
@@ -134,6 +126,25 @@ public class TiltControl : MonoBehaviour
 
         
         return control;
+    }
+
+
+    float ApplyDeadzoneAndSensitivity(float value)
+    {
+        float abs = Mathf.Abs(value);
+
+        if (abs < deadZone)
+            return 0f;
+
+        // skala från deadzone → 1
+        float adjusted = (abs - deadZone) / (1f - deadZone);
+
+        // sensitivity kurva
+        float exponent = Mathf.Lerp(2.5f, 0.5f, (sensitivity - 0.3f) / (5f - 0.3f));
+        adjusted = Mathf.Pow(adjusted, exponent);
+
+        // återställ riktning
+        return Mathf.Sign(value) * adjusted;
     }
 
     public void Calibrate()
