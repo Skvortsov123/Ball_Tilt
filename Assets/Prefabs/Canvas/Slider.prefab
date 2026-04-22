@@ -271,6 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3319510954587418152}
   - component: {fileID: 8949535434990158073}
+  - component: {fileID: 777760083449146542}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -363,6 +364,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &777760083449146542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508071142782874724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687a1181aa0ad4008a96f388565f173f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderReset
+  slider: {fileID: 0}
 --- !u!1 &6914457327600423249
 GameObject:
   m_ObjectHideFlags: 0

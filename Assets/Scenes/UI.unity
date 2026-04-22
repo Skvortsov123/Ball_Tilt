@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 377341055}
   - component: {fileID: 377341056}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: SideMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +827,7 @@ RectTransform:
   m_GameObject: {fileID: 377341049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.253333, y: 1, z: 1.3333334}
+  m_LocalScale: {x: 6, y: 1.142132, z: 1.5228428}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 50579093}
@@ -837,7 +837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 122.44287, y: -112.56958}
+  m_AnchoredPosition: {x: 141.2, y: -112.56958}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377341051
@@ -3005,7 +3005,7 @@ MonoBehaviour:
   m_MinValue: 0.3
   m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 1.071
+  m_Value: 2.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3262,11 +3262,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6439350874826422824, guid: 92df24683cbb41289bd336db70ce6d77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -60.31909
+      value: -173
       objectReference: {fileID: 0}
     - target: {fileID: 6439350874826422824, guid: 92df24683cbb41289bd336db70ce6d77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 68.936035
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 6439350874826422824, guid: 92df24683cbb41289bd336db70ce6d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

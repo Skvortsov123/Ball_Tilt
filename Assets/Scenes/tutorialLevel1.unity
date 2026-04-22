@@ -656,6 +656,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 116103452439377848, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 116103452439377848, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
+      propertyPath: forceStrength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 116103452439377848, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
       propertyPath: keyboardControl
       value: 1
       objectReference: {fileID: 0}
@@ -936,6 +944,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 809422578566540479, guid: d53227deae5d0cf4a9a08ff6bb397664, type: 3}
+      propertyPath: limitStrenth
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5430263108886471804, guid: d53227deae5d0cf4a9a08ff6bb397664, type: 3}
       propertyPath: m_Name
       value: Tilting Light

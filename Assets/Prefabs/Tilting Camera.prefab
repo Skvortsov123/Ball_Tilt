@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058b91dac943b5c84bd4d413e7a11aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TiltCamera
-  tiltSpeed: 2
-  tiltAmplitude: 10
+  speed: 2
+  amplitude: 2.5
   target: {fileID: 0}
   followSpeed: 5
