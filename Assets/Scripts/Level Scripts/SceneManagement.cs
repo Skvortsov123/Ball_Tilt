@@ -6,7 +6,7 @@ public class SceneManagement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        print("Load UI Ssene!");
+        print("Load UI Scene!");
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
     }
 

@@ -7,47 +7,70 @@ public class FastMenu : MonoBehaviour
 
     [Header("Control Mode")]
     public GameObject joystick;
-    public GameObject sliderUI; 
+    public GameObject sliderUI;
 
-    public TiltControl tiltControl;
+    public TiltControl[] tiltControls; // stöd för flera bollar
+
     public Button calibrateButton;
     public Slider sensitivitySlider;
     public Slider deadzoneSlider;
     public Slider musicSlider;
     public Slider volumeSlider;
 
-    // private bool joystickActive = false;
-
     [Header("Menus")]
     public GameObject settingsPanel;
     public GameObject fastMenu;
 
+
     [Header("Control Icons")]
-public Image controlButtonImage; 
-    public Sprite tiltIcon;         
-    public Sprite joystickIcon;     
-    public Sprite sliderIcon;       
+    public Image controlButtonImage;
+    public Sprite tiltIcon;
+    public Sprite joystickIcon;
+    public Sprite sliderIcon;
 
-
-    public void Start()
+    void Start()
     {
         animator = GetComponent<Animator>();
 
-        tiltControl = GameObject.FindGameObjectWithTag("Player")
-                        .GetComponent<TiltControl>();
 
-        Debug.Log("TiltControl found: " + tiltControl);
 
-        // joystickActive = GameSettings.useJoystick; 
+        // Hämta alla bollar i scenen
+        tiltControls = FindObjectsByType<TiltControl>(FindObjectsSortMode.None);
+        Debug.Log("TiltControls found: " + tiltControls.Length);
 
-        UpdateControlUI(); // uppdatera UI baserat på mode
+        UpdateControlUI();
 
         settingsPanel.SetActive(false);
 
+        // --- SÄTT INITIALA VÄRDEN PÅ SLIDERS (viktigt att göra före listeners) ---
         sensitivitySlider.value = GameSettings.sensitivity;
         deadzoneSlider.value = GameSettings.deadZone;
         musicSlider.value = GameSettings.musicVolume;
         volumeSlider.value = GameSettings.sfxVolume;
+
+        // --- KOPPLA SLIDERS TILL AUDIO MANAGER (via singleton) ---
+        // Tar bort gamla listeners först för att undvika duplicates om UI laddas flera gånger
+        var audio = AudioManager.Instance;
+
+        if (audio != null)
+        {
+            musicSlider.onValueChanged.RemoveAllListeners();
+            volumeSlider.onValueChanged.RemoveAllListeners();
+
+            musicSlider.onValueChanged.AddListener(audio.SetMusicVolume);
+            volumeSlider.onValueChanged.AddListener(audio.SetSFXVolume);
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager.Instance is null");
+        }
+
+        // --- KOPPLA GAMEPLAY SLIDERS ---
+        sensitivitySlider.onValueChanged.RemoveAllListeners();
+        deadzoneSlider.onValueChanged.RemoveAllListeners();
+
+        sensitivitySlider.onValueChanged.AddListener(SetSensitivity);
+        deadzoneSlider.onValueChanged.AddListener(SetDeadZone);
     }
 
     public void toggleMenu()
@@ -57,7 +80,8 @@ public Image controlButtonImage;
 
     public void toggleControl()
     {
-        switch (GameSettings.controlMode) // rotera mellan 3 lägen
+        // Växla mellan control modes
+        switch (GameSettings.controlMode)
         {
             case ControlMode.Tilt:
                 GameSettings.controlMode = ControlMode.Joystick;
@@ -72,7 +96,7 @@ public Image controlButtonImage;
                 break;
         }
 
-        UpdateControlUI(); // uppdatera UI efter byte
+        UpdateControlUI();
     }
 
     void UpdateControlUI()
@@ -82,7 +106,7 @@ public Image controlButtonImage;
 
         calibrateButton.interactable = (GameSettings.controlMode == ControlMode.Tilt);
 
-        // byt ikon beroende på läge
+        // Byt ikon beroende på control mode
         switch (GameSettings.controlMode)
         {
             case ControlMode.Tilt:
@@ -101,17 +125,11 @@ public Image controlButtonImage;
 
     public void Calibrate()
     {
-        var tiltControl = GameObject.FindGameObjectWithTag("Player")
-                                   .GetComponent<TiltControl>();
-
-        if (tiltControl != null)
+        // Kalibrera alla bollar
+        foreach (var tc in tiltControls)
         {
-            tiltControl.Calibrate();
-            Debug.Log("Calibration triggered on: " + tiltControl.name);
-        }
-        else
-        {
-            Debug.LogWarning("No TiltControl found!");
+            tc.Calibrate();
+            Debug.Log("Calibration triggered on: " + tc.name);
         }
     }
 
@@ -133,11 +151,19 @@ public Image controlButtonImage;
 
     public void SetSensitivity(float value)
     {
-        tiltControl.SetSensitivity(value);
+        // Uppdatera alla bollar
+        foreach (var tc in tiltControls)
+        {
+            tc.SetSensitivity(value);
+        }
     }
 
     public void SetDeadZone(float value)
     {
-        tiltControl.SetDeadZone(value);
+        // Uppdatera alla bollar
+        foreach (var tc in tiltControls)
+        {
+            tc.SetDeadZone(value);
+        }
     }
 }
