@@ -166,4 +166,10 @@ public class FastMenu : MonoBehaviour
             tc.SetDeadZone(value);
         }
     }
+
+    public void toggleMusicButton()
+    {
+        AudioManager.Instance.ToggleMusic();
+    }
+
 }

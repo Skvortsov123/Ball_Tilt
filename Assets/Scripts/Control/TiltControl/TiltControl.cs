@@ -37,14 +37,7 @@ public class TiltControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        // --- GAMMAL KOD (påverkades av mass och clampade kraft konstigt) ---
-        // rb.AddForce(Vector3.ClampMagnitude(getControl() * forceLimit * rb.mass, forceLimit));
-
-        // --- NY KOD ---
-        // Använd Acceleration så att mass inte påverkar känslan
-        Vector3 input = getControl();
-        rb.AddForce(input * forceLimit, ForceMode.Acceleration);
-
+        rb.AddForce(Vector3.ClampMagnitude(getControl() * forceLimit, forceLimit), ForceMode.Acceleration);
         chechImpactVibration();
     }
 
@@ -68,40 +61,18 @@ public class TiltControl : MonoBehaviour
     {
         Vector3 control = Vector3.zero;
 
-        
-        switch (GameSettings.controlMode) //  välj input-läge  tilt , joystick eller slider
+        switch (GameSettings.controlMode) //  v�lj input-l�ge  tilt , joystick eller slider
         {
             case ControlMode.Tilt:
                 if (enableAccelerometer)
                 {
                     Vector3 tilt = Input.acceleration;
+                    control = (new Vector3(tilt.y, tilt.z, -tilt.x) - offset) * Mathf.Pow(sensitivity, 2);
+                    control.y = 0;  //Ingen extra gravitation
 
-                    // --- GAMMAL KOD (tog bort eftersom sensitivity påverkade kraft direkt) ---
-                    // control = (new Vector3(tilt.y, tilt.z, -tilt.x) - offset) * Mathf.Pow(sensitivity, 2);
-                    // control.y = 0;
-                    //
-                    // if (Mathf.Abs(control.x) < deadZone) control.x = 0;
-                    // if (Mathf.Abs(control.y) < deadZone) control.y = 0;
-                    // if (Mathf.Abs(control.z) < deadZone) control.z = 0;
-
-                    // --- NY KOD ---
-                    // 1. Läs raw tilt och ta bort offset
-                    Vector3 raw = new Vector3(tilt.y, 0, -tilt.x) - new Vector3(offset.x, 0, offset.z);
-
-                    // 2. Räkna ut hur mycket telefonen lutar (styrka)
-                    // --- NY KOD ---
-                    // Deadzone + sensitivity per axel (fixar asymmetri fram/bak)
-
-
-
-                    // X-axis
-                    raw.x = ApplyDeadzoneAndSensitivity(raw.x);
-
-                    // Z-axis
-                    raw.z = ApplyDeadzoneAndSensitivity(raw.z);
-
-                    // 6. Sätt slutlig kontroll (max alltid 1, oberoende av sensitivity)
-                    control = raw;
+                    if (Mathf.Abs(control.x) < deadZone) control.x = 0;
+                    if (Mathf.Abs(control.y) < deadZone) control.y = 0;
+                    if (Mathf.Abs(control.z) < deadZone) control.z = 0;
                 }
                 break;
 
@@ -120,35 +91,15 @@ public class TiltControl : MonoBehaviour
                 }
                 break;
         }
-
-        //Keyboard
-        control += Keyboard.getWASD();
-
         
+        control += Keyboard.getWASD();  //Keyboard
+
         return control;
-    }
-
-
-    float ApplyDeadzoneAndSensitivity(float value)
-    {
-        float abs = Mathf.Abs(value);
-
-        if (abs < deadZone)
-            return 0f;
-
-        // skala från deadzone → 1
-        float adjusted = (abs - deadZone) / (1f - deadZone);
-
-        // sensitivity kurva
-        float exponent = Mathf.Lerp(2.5f, 0.5f, (sensitivity - 0.3f) / (5f - 0.3f));
-        adjusted = Mathf.Pow(adjusted, exponent);
-
-        // återställ riktning
-        return Mathf.Sign(value) * adjusted;
     }
 
     public void Calibrate()
     {
+        print("offset calibrated");
         Vector3 tilt = Input.acceleration;
         offset = new Vector3(tilt.y, tilt.z, -tilt.x);
         GameSettings.calibrationOffset = offset;
