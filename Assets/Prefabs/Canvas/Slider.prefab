@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -376,7 +376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687a1181aa0ad4008a96f388565f173f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderReset
-  slider: {fileID: 0}
 --- !u!1 &6914457327600423249
 GameObject:
   m_ObjectHideFlags: 0
