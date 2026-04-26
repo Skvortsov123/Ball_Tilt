@@ -17,5 +17,5 @@ public static class GameSettings
 
     public static ControlMode controlMode = ControlMode.Tilt; 
 
-    public static Vector3 calibrationOffset = Vector3.zero;
+    public static Vector3 calibrationOffset;
 }
