@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class AudioManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject); // överlever scenbyten
 
+        SceneManager.sceneLoaded += OnSceneLoaded; // förbereder att köra onSceneLoaded varje gång en scen laddas. Unity kör OnSceneLoaded(scene, mode);
 
         // Skapa AudioSources om de inte finns
         if (musicSource == null)
@@ -56,6 +59,36 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("New scene loaded: " + scene.name);
+
+        // Musiken måste lika i resources/Audio och ha samma namn som scenen nedan för att spelas automatiskt, annars spelas defaultmusiken
+
+        switch (scene.name)
+        {
+            case "MainMenu":
+                PlayMusic(Resources.Load<AudioClip>("Audio/My Song 13"));
+                break;
+
+            case "Wood1":
+                PlayMusic(Resources.Load<AudioClip>("Audio/My Song 13"));
+                break;
+
+            case "dsvLevel1":
+                PlayMusic(Resources.Load<AudioClip>("Audio/My Song 13"));
+                break;
+            case "GolfLevel1":
+                PlayMusic(Resources.Load<AudioClip>("Audio/My Song 13"));
+                break;
+            default:
+                PlayMusic(Resources.Load<AudioClip>("Audio/My Song 13"));
+                break;
+        }
+
+    }
+
+
     //för att spela ny låt vid ny värld exempelvis
     public void PlayMusic(AudioClip newClip)
     {
@@ -82,9 +115,9 @@ public class AudioManager : MonoBehaviour
         GameSettings.sfxVolume = value;
     }
 
-    public void ToggleMusic()
+    public void ToggleMusic(bool muted)
     {
-        musicSource.mute = !musicSource.mute;
-        GameSettings.musicMuted = musicSource.mute;
+        musicSource.mute = muted;
+        GameSettings.musicMuted = muted;
     }
 }

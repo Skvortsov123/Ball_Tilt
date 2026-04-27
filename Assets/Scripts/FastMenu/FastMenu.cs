@@ -17,6 +17,7 @@ public class FastMenu : MonoBehaviour
     public Slider deadzoneSlider;
     public Slider musicSlider;
     public Slider volumeSlider;
+    public Toggle toggleMuted;
 
     [Header("Menus")]
     public GameObject settingsPanel;
@@ -49,17 +50,21 @@ public class FastMenu : MonoBehaviour
         musicSlider.value = GameSettings.musicVolume;
         volumeSlider.value = GameSettings.sfxVolume;
 
+        toggleMuted.isOn = GameSettings.musicMuted;
+
         // --- KOPPLA SLIDERS TILL AUDIO MANAGER (via singleton) ---
-        // Tar bort gamla listeners f�rst f�r att undvika duplicates om UI laddas flera g�nger
+        // Tar bort gamla listeners först för att undvika duplicates om UI laddas flera gånger
         var audio = AudioManager.Instance;
 
         if (audio != null)
         {
             musicSlider.onValueChanged.RemoveAllListeners();
             volumeSlider.onValueChanged.RemoveAllListeners();
+            toggleMuted.onValueChanged.RemoveAllListeners();
 
             musicSlider.onValueChanged.AddListener(audio.SetMusicVolume);
             volumeSlider.onValueChanged.AddListener(audio.SetSFXVolume);
+            toggleMuted.onValueChanged.AddListener(AudioManager.Instance.ToggleMusic);
         }
         else
         {
@@ -159,9 +164,6 @@ public class FastMenu : MonoBehaviour
         GameSettings.deadZone = value;
     }
 
-    public void toggleMusicButton()
-    {
-        AudioManager.Instance.ToggleMusic();
-    }
+    
 
 }

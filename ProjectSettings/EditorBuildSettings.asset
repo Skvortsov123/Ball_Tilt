@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/tutorialLevel4.unity
     guid: 920d1db761a4419438e4d6d59cacf9b8
   - enabled: 1
-    path: Assets/Scenes/dsvLevel1.unity
+    path: Assets/Scenes/Dsv Levels/dsvLevel1.unity
     guid: 517b47fc8bcf30d43bcd75ac2f88b9af
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
