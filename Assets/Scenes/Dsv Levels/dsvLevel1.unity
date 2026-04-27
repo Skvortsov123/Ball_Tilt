@@ -7356,7 +7356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739627499215720762, guid: 64f5ca6732a0c5d41be7f10a410944f0, type: 3}
       propertyPath: bounceForce
-      value: 175
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80400,7 +80400,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4575579371106614005, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
       propertyPath: nextSceneIs
-      value: mainMenu
+      value: DsvLevel2
       objectReference: {fileID: 0}
     - target: {fileID: 7873870728241069819, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
       propertyPath: m_Name
