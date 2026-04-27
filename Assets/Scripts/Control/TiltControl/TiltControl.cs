@@ -19,8 +19,6 @@ public class TiltControl : MonoBehaviour
     // Sensitivity & Deadzone
     //[Header("Tilt Settings")]
     private float sensitivity = 1f;   // Multiplier for tilt strength
-    private float deadZone = 0.05f;  // Ignore small tilt noise
-
 
 
     void Start()
@@ -31,7 +29,6 @@ public class TiltControl : MonoBehaviour
 
         offset = GameSettings.calibrationOffset;
         sensitivity = GameSettings.sensitivity;
-        deadZone = GameSettings.deadZone;
 
     }
 
@@ -66,13 +63,19 @@ public class TiltControl : MonoBehaviour
             case ControlMode.Tilt:
                 if (enableAccelerometer)
                 {
-                    Vector3 tilt = Input.acceleration;
-                    control = (new Vector3(tilt.y, tilt.z, -tilt.x) - offset) * Mathf.Pow(sensitivity, 2);
-                    control.y = 0;  //Ingen extra gravitation
+                    Vector3 tiltVector = (Input.acceleration - GameSettings.calibrationOffset) * Mathf.Pow(sensitivity, 2);
+                    control = new Vector3(tiltVector.y, 0, -tiltVector.x);
 
-                    if (Mathf.Abs(control.x) < deadZone) control.x = 0;
-                    if (Mathf.Abs(control.y) < deadZone) control.y = 0;
-                    if (Mathf.Abs(control.z) < deadZone) control.z = 0;
+                    if (control.magnitude > GameSettings.deadZone)
+                    {
+                        float force = (control.magnitude - GameSettings.deadZone) / (1f - GameSettings.deadZone);
+                        control = control.normalized * force;    // dir * force
+                    }
+                    else
+                    {
+                        control = Vector3.zero;
+                    }
+
                 }
                 break;
 
@@ -80,7 +83,6 @@ public class TiltControl : MonoBehaviour
                 if (joystick != null)
                 {
                     control = new Vector3(joystick.getPosition().y, 0, -joystick.getPosition().x);
-                    print(control);
                 }
                 break;
 
@@ -91,19 +93,10 @@ public class TiltControl : MonoBehaviour
                 }
                 break;
         }
-        
+
         control += Keyboard.getWASD();  //Keyboard
 
         return control;
-    }
-
-    public void Calibrate()
-    {
-        print("offset calibrated");
-        Vector3 tilt = Input.acceleration;
-        offset = new Vector3(tilt.y, tilt.z, -tilt.x);
-        GameSettings.calibrationOffset = offset;
-
     }
 
     //Sensitivity slider hook
@@ -111,14 +104,6 @@ public class TiltControl : MonoBehaviour
     {
         sensitivity = value;
         GameSettings.sensitivity = value;
-
-    }
-
-    //Deadzone slider hook
-    public void SetDeadZone(float value)
-    {
-        deadZone = value * 0.2f; // scale slider to usable range
-        GameSettings.deadZone = deadZone;
 
     }
 
