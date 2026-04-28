@@ -103,6 +103,13 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    //kalla på denna i andra skript för att spela ljudeffekter. AudioManager.Instance.PlaySFX(soundeffectName, 0.4f);
+    public void PlaySFX(AudioClip clip, float volume = 1f) //volymen kan justeras per ljud, t.ex. för att göra vissa ljudeffekter mer diskreta. generellt används fortfarande sliderns volym
+    {
+        sfxSource.PlayOneShot(clip);
+    }
+
+
     public void SetMusicVolume(float value)
     {
         musicSource.volume = value;

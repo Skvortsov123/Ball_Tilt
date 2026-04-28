@@ -126,3 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   velocityToBreak: 0.5
+  breakSound: {fileID: 8300000, guid: 57caeafbdd1db9d438e471f6433da348, type: 3}

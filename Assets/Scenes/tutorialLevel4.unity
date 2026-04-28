@@ -85226,6 +85226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   velocityToBreak: 1
+  breakSound: {fileID: 8300000, guid: cc33563b8756eb14a873c53b974a75bd, type: 3}
 --- !u!65 &508826159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93039,6 +93040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   velocityToBreak: 1
+  breakSound: {fileID: 8300000, guid: cc33563b8756eb14a873c53b974a75bd, type: 3}
 --- !u!65 &1306338735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93389,6 +93391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   velocityToBreak: 1
+  breakSound: {fileID: 8300000, guid: cc33563b8756eb14a873c53b974a75bd, type: 3}
 --- !u!65 &1545903819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93693,6 +93696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   velocityToBreak: 1
+  breakSound: {fileID: 8300000, guid: cc33563b8756eb14a873c53b974a75bd, type: 3}
 --- !u!65 &1671505962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94209,6 +94213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   velocityToBreak: 1
+  breakSound: {fileID: 8300000, guid: cc33563b8756eb14a873c53b974a75bd, type: 3}
 --- !u!65 &2022276531
 BoxCollider:
   m_ObjectHideFlags: 0
