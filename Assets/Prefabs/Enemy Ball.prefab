@@ -158,11 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d034012cb037b27b2a1601308cca1b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::gravityControl
-  speed: 40
+  forceLimit: 10
   enableAccelerometer: 1
   offset: {x: 0, y: 0, z: 0}
-  sensitivity: 1
-  deadZone: 0
   enableVibration: 1
 --- !u!114 &4898894593070948088
 MonoBehaviour:

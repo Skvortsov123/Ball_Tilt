@@ -66,7 +66,15 @@ public class hazardDetection : MonoBehaviour
       
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        
+
+
+        // Hitta slider och resetta input
+        var slider = FindFirstObjectByType<SliderControl>();
+        if (slider != null)
+        {
+            slider.ResetToCenter();
+        }
+
 
         yield return new WaitForSeconds(1.2f);
 

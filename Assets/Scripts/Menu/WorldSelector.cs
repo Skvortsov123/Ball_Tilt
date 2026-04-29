@@ -3,6 +3,7 @@
 public class WorldSelector : MonoBehaviour
 {
     [SerializeField] GameObject[] worlds; // Array med alla world panels
+    [SerializeField] AudioClip clickSound; // Ljud som spelas
     private int currentWorld = 0; 
 
     void Start()
@@ -22,6 +23,9 @@ public class WorldSelector : MonoBehaviour
 
         // Uppdatera vilken värld som visas
         ShowWorld(currentWorld);
+
+        AudioManager.Instance.PlaySFX(clickSound);
+
     }
 
     public void PreviousWorld()
@@ -35,6 +39,8 @@ public class WorldSelector : MonoBehaviour
 
         // Uppdatera vilken värld som visas
         ShowWorld(currentWorld);
+
+        AudioManager.Instance.PlaySFX(clickSound);
     }
 
     void ShowWorld(int index)

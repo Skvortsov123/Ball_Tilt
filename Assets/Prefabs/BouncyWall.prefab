@@ -153,4 +153,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ef0cdfd5706b042b86b7da9fbea8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BounceWall
-  bounceForce: 5
+  bounceForce: 10
+  cooldownTime: 0.1
