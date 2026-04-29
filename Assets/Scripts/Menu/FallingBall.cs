@@ -14,7 +14,15 @@ public class FallingBall : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(TeleportRoutine());
+        //StartCoroutine(TeleportRoutine());
+    }
+
+    void Update()
+    {
+        if(transform.position.y < -200 || transform.position.y > 5000)
+        {
+            TeleportToTop();
+        }
     }
 
     IEnumerator TeleportRoutine()
@@ -22,6 +30,7 @@ public class FallingBall : MonoBehaviour
         while (true) // Infinite loop for repeated teleporting
         {
             yield return new WaitForSeconds(teleportDelay);
+            teleportDelay = Random.Range(4f, 9f);
             TeleportToTop();
         }
     }
@@ -33,8 +42,6 @@ public class FallingBall : MonoBehaviour
 
         // 2. Set new position
         transform.position = new Vector3(randomX, topBoundary, transform.position.z);
-
-        teleportDelay = Random.Range(4f, 9f);
 
         rb.gravityScale = Random.Range(40f, 100f);
 
