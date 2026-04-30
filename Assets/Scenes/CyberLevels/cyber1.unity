@@ -185,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30ada5a22f2836cb8732e7f58d3fee, type: 2}
+  - {fileID: 2100000, guid: 2f0abd16356464002bc05c9f4ea39b19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -297,7 +297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30ada5a22f2836cb8732e7f58d3fee, type: 2}
+  - {fileID: 2100000, guid: 2f0abd16356464002bc05c9f4ea39b19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -450,8 +450,8 @@ Transform:
   m_GameObject: {fileID: 125027452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.15, y: -1.4765, z: -9.26}
-  m_LocalScale: {x: 1, y: 14.162047, z: 9.383125}
+  m_LocalPosition: {x: 0.15, y: -2.481, z: -9.26}
+  m_LocalScale: {x: 1, y: 12.152452, z: 9.383125}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -562,8 +562,8 @@ Transform:
   m_GameObject: {fileID: 657901560}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.1504, y: -1.4765, z: 9.25}
-  m_LocalScale: {x: 1, y: 14.162047, z: 9.383125}
+  m_LocalPosition: {x: 0.1504, y: -2.481, z: 9.25}
+  m_LocalScale: {x: 1, y: 12.152452, z: 9.383125}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -674,8 +674,8 @@ Transform:
   m_GameObject: {fileID: 780720528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5635, y: -0.461, z: -0.006}
-  m_LocalScale: {x: 0.9729, y: 12.130839, z: 19.505934}
+  m_LocalPosition: {x: -4.5635, y: -1.6096, z: -0.006}
+  m_LocalScale: {x: 0.9729, y: 10.409473, z: 19.505934}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -835,8 +835,8 @@ Transform:
   m_GameObject: {fileID: 1067527761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.55, y: 0.85, z: -0.0075}
-  m_LocalScale: {x: 1, y: 9.508558, z: 19.511349}
+  m_LocalPosition: {x: 4.55, y: -0.4845, z: -0.0075}
+  m_LocalScale: {x: 1, y: 8.159294, z: 19.511349}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -991,7 +991,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30ada5a22f2836cb8732e7f58d3fee, type: 2}
+  - {fileID: 2100000, guid: 2f0abd16356464002bc05c9f4ea39b19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1190,7 +1190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30ada5a22f2836cb8732e7f58d3fee, type: 2}
+  - {fileID: 2100000, guid: 2f0abd16356464002bc05c9f4ea39b19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1303,7 +1303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30ada5a22f2836cb8732e7f58d3fee, type: 2}
+  - {fileID: 2100000, guid: 2f0abd16356464002bc05c9f4ea39b19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1438,7 +1438,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fec2751bdd3b64b4182fcd491e54e65f, type: 2}
+  - {fileID: 2100000, guid: 2f0abd16356464002bc05c9f4ea39b19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1496,6 +1496,10 @@ PrefabInstance:
     - target: {fileID: 5430263108886471804, guid: d53227deae5d0cf4a9a08ff6bb397664, type: 3}
       propertyPath: m_Name
       value: Tilting Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430263108886471804, guid: d53227deae5d0cf4a9a08ff6bb397664, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6197379248595820764, guid: d53227deae5d0cf4a9a08ff6bb397664, type: 3}
       propertyPath: m_LocalPosition.x

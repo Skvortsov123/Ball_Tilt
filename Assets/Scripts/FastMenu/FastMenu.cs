@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class FastMenu : MonoBehaviour
@@ -9,18 +10,22 @@ public class FastMenu : MonoBehaviour
     public GameObject joystick;
     public GameObject sliderUI;
 
-    // public TiltControl tiltControl;
-    public TiltControl[] tiltControls; // NYTT: stöd för flera bollar
+    public TiltControl[] tiltControls; // stï¿½d fï¿½r flera bollar
 
     public Button calibrateButton;
     public Slider sensitivitySlider;
     public Slider deadzoneSlider;
+
+    [Header("Sound")]
+    public AudioClip clickSound;
     public Slider musicSlider;
     public Slider volumeSlider;
+    public Toggle toggleMuted;
 
     [Header("Menus")]
     public GameObject settingsPanel;
     public GameObject fastMenu;
+
 
     [Header("Control Icons")]
     public Image controlButtonImage;
@@ -28,35 +33,65 @@ public class FastMenu : MonoBehaviour
     public Sprite joystickIcon;
     public Sprite sliderIcon;
 
-    public void Start()
+    void Start()
     {
         animator = GetComponent<Animator>();
 
-        // tiltControl = GameObject.FindGameObjectWithTag("Player")
-        //                 .GetComponent<TiltControl>();
 
-        tiltControls = FindObjectsByType<TiltControl>(FindObjectsSortMode.None); // NYTT: hämta alla bollar
+
+        // Hï¿½mta alla bollar i scenen
+        tiltControls = FindObjectsByType<TiltControl>(FindObjectsSortMode.None);
         Debug.Log("TiltControls found: " + tiltControls.Length);
 
-        UpdateControlUI(); // uppdatera UI baserat på mode
+        UpdateControlUI();
 
         settingsPanel.SetActive(false);
 
+        // --- Sï¿½TT INITIALA Vï¿½RDEN Pï¿½ SLIDERS (viktigt att gï¿½ra fï¿½re listeners) ---
         sensitivitySlider.value = GameSettings.sensitivity;
         deadzoneSlider.value = GameSettings.deadZone;
         musicSlider.value = GameSettings.musicVolume;
         volumeSlider.value = GameSettings.sfxVolume;
 
+        toggleMuted.isOn = GameSettings.musicMuted;
+
+        // --- KOPPLA SLIDERS TILL AUDIO MANAGER (via singleton) ---
+        // Tar bort gamla listeners fÃ¶rst fÃ¶r att undvika duplicates om UI laddas flera gÃ¥nger
+        var audio = AudioManager.Instance;
+
+        if (audio != null)
+        {
+            musicSlider.onValueChanged.RemoveAllListeners();
+            volumeSlider.onValueChanged.RemoveAllListeners();
+            toggleMuted.onValueChanged.RemoveAllListeners();
+
+            musicSlider.onValueChanged.AddListener(audio.SetMusicVolume);
+            volumeSlider.onValueChanged.AddListener(audio.SetSFXVolume);
+            toggleMuted.onValueChanged.AddListener(AudioManager.Instance.ToggleMusic);
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager.Instance is null");
+        }
+
+        // --- KOPPLA GAMEPLAY SLIDERS ---
+        sensitivitySlider.onValueChanged.RemoveAllListeners();
+        deadzoneSlider.onValueChanged.RemoveAllListeners();
+
+        sensitivitySlider.onValueChanged.AddListener(SetSensitivity);
+        deadzoneSlider.onValueChanged.AddListener(SetDeadZone);
     }
 
     public void toggleMenu()
     {
         animator.SetTrigger("Toggle");
+        AudioManager.Instance.PlaySFX(clickSound);
     }
 
     public void toggleControl()
     {
-        switch (GameSettings.controlMode) // rotera mellan 3 lägen
+        // Vï¿½xla mellan control modes
+        switch (GameSettings.controlMode)
         {
             case ControlMode.Tilt:
                 GameSettings.controlMode = ControlMode.Joystick;
@@ -70,8 +105,8 @@ public class FastMenu : MonoBehaviour
                 GameSettings.controlMode = ControlMode.Tilt;
                 break;
         }
-
-        UpdateControlUI(); // uppdatera UI efter byte
+        AudioManager.Instance.PlaySFX(clickSound);
+        UpdateControlUI();
     }
 
     void UpdateControlUI()
@@ -81,7 +116,7 @@ public class FastMenu : MonoBehaviour
 
         calibrateButton.interactable = (GameSettings.controlMode == ControlMode.Tilt);
 
-        // byt ikon beroende på läge
+        // Byt ikon beroende pï¿½ control mode
         switch (GameSettings.controlMode)
         {
             case ControlMode.Tilt:
@@ -100,18 +135,13 @@ public class FastMenu : MonoBehaviour
 
     public void Calibrate()
     {
-        // var tiltControl = GameObject.FindGameObjectWithTag("Player")
-        //                            .GetComponent<TiltControl>();
-
-        foreach (var tc in tiltControls) // NYTT: kalibrera alla
-        {
-            tc.Calibrate();
-            Debug.Log("Calibration triggered on: " + tc.name);
-        }
+        AudioManager.Instance.PlaySFX(clickSound);
+        GameSettings.calibrationOffset = Input.gyro.gravity;
     }
 
     public void OpenSettings()
     {
+        AudioManager.Instance.PlaySFX(clickSound);
         settingsPanel.SetActive(true);
 
         if (fastMenu != null)
@@ -120,6 +150,7 @@ public class FastMenu : MonoBehaviour
 
     public void CloseSettings()
     {
+        AudioManager.Instance.PlaySFX(clickSound);
         settingsPanel.SetActive(false);
 
         if (fastMenu != null)
@@ -128,9 +159,8 @@ public class FastMenu : MonoBehaviour
 
     public void SetSensitivity(float value)
     {
-        // tiltControl.SetSensitivity(value);
-
-        foreach (var tc in tiltControls) // NYTT: ändra alla
+        // Uppdatera alla bollar
+        foreach (var tc in tiltControls)
         {
             tc.SetSensitivity(value);
         }
@@ -138,11 +168,9 @@ public class FastMenu : MonoBehaviour
 
     public void SetDeadZone(float value)
     {
-        // tiltControl.SetDeadZone(value);
-
-        foreach (var tc in tiltControls) // NYTT: ändra alla
-        {
-            tc.SetDeadZone(value);
-        }
+        GameSettings.deadZone = value;
     }
+
+    
+
 }

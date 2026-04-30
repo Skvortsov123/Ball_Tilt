@@ -27,7 +27,7 @@ public class playerSoundScript : MonoBehaviour
         dynamicVolume = Mathf.Clamp01(playerVelocity / 12f);
 
         //enemy får lägre volym
-        float volumeMultiplier = isMainPlayer ? 1f : 0.6f;
+        float volumeMultiplier = isMainPlayer ? 2f : 0.6f;
 
         rollingSource.volume = dynamicVolume * GameSettings.sfxVolume * volumeMultiplier;
     }

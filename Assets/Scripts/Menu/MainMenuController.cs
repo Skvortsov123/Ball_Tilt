@@ -3,7 +3,8 @@ using UnityEngine;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
-    [SerializeField] GameObject levelMenu; 
+    [SerializeField] GameObject levelMenu;
+    [SerializeField] AudioClip clickSound;
     public Animator animator;
 
     void Start()
@@ -17,6 +18,7 @@ public class MainMenuController : MonoBehaviour
     {
         // När spelaren trycker på Play:
         //kanske nån animation och ljud här??
+        AudioManager.Instance.PlaySFX(clickSound);
         animator.SetTrigger("pressPlay");
 
     }

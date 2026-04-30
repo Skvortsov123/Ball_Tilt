@@ -6,7 +6,6 @@ using System.Collections;
 public class TiltControl : MonoBehaviour
 {
     public float forceLimit;
-    public bool enableAccelerometer = true;
     public Vector3 offset; //only needed if manual numeric offset?
     public bool enableVibration = true; //styr om denna boll ska trigga vibration (undviker dubbel vibration ifall enemyball fins)
 
@@ -19,8 +18,6 @@ public class TiltControl : MonoBehaviour
     // Sensitivity & Deadzone
     //[Header("Tilt Settings")]
     private float sensitivity = 1f;   // Multiplier for tilt strength
-    private float deadZone = 0.05f;  // Ignore small tilt noise
-
 
 
     void Start()
@@ -31,13 +28,16 @@ public class TiltControl : MonoBehaviour
 
         offset = GameSettings.calibrationOffset;
         sensitivity = GameSettings.sensitivity;
-        deadZone = GameSettings.deadZone;
 
+        if (SystemInfo.supportsGyroscope)
+        {
+            Input.gyro.enabled = true;
+        }
     }
 
     void FixedUpdate()
     {
-        rb.AddForce(Vector3.ClampMagnitude(getControl() * forceLimit * rb.mass, forceLimit));
+        rb.AddForce(Vector3.ClampMagnitude(getControl() * forceLimit, forceLimit), ForceMode.Acceleration);
         chechImpactVibration();
     }
 
@@ -61,27 +61,29 @@ public class TiltControl : MonoBehaviour
     {
         Vector3 control = Vector3.zero;
 
-        
         switch (GameSettings.controlMode) //  v�lj input-l�ge  tilt , joystick eller slider
         {
             case ControlMode.Tilt:
-                if (enableAccelerometer)
-                {
-                    Vector3 tilt = Input.acceleration;
-                    control = (new Vector3(tilt.y, tilt.z, -tilt.x) - offset) * Mathf.Pow(sensitivity, 2);
-                    control.y = 0;  //Ingen extra gravitation
 
-                    if (Mathf.Abs(control.x) < deadZone) control.x = 0;
-                    if (Mathf.Abs(control.y) < deadZone) control.y = 0;
-                    if (Mathf.Abs(control.z) < deadZone) control.z = 0;
+                Vector3 g = (Input.gyro.gravity - GameSettings.calibrationOffset) * Mathf.Pow(sensitivity, 2);
+                control = new Vector3(g.y, 0, -g.x);
+
+                if (control.magnitude > GameSettings.deadZone)
+                {
+                    float force = (control.magnitude - GameSettings.deadZone) / (1f - GameSettings.deadZone);
+                    control = control.normalized * force;    // dir * force
                 }
+                else
+                {
+                    control = Vector3.zero;
+                }
+
                 break;
 
             case ControlMode.Joystick:
                 if (joystick != null)
                 {
                     control = new Vector3(joystick.getPosition().y, 0, -joystick.getPosition().x);
-                    print(control);
                 }
                 break;
 
@@ -93,19 +95,9 @@ public class TiltControl : MonoBehaviour
                 break;
         }
 
-        //Keyboard
-        control += Keyboard.getWASD();
+        control += Keyboard.getWASD();  //Keyboard
 
-        
         return control;
-    }
-
-    public void Calibrate()
-    {
-        Vector3 tilt = Input.acceleration;
-        offset = new Vector3(tilt.y, tilt.z, -tilt.x);
-        GameSettings.calibrationOffset = offset;
-
     }
 
     //Sensitivity slider hook
@@ -113,14 +105,6 @@ public class TiltControl : MonoBehaviour
     {
         sensitivity = value;
         GameSettings.sensitivity = value;
-
-    }
-
-    //Deadzone slider hook
-    public void SetDeadZone(float value)
-    {
-        deadZone = value * 0.2f; // scale slider to usable range
-        GameSettings.deadZone = deadZone;
 
     }
 
