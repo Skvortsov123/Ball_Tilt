@@ -8,6 +8,9 @@ TagManager:
   - Hole Hazard
   - Wall
   - Sand
+  - Undefined
+  - stoveOff
+  - stoveOn
   layers:
   - Default
   - TransparentFX

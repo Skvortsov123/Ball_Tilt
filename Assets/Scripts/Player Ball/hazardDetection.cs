@@ -1,14 +1,11 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Rendering.Universal;
 
 public class hazardDetection : MonoBehaviour
 {
     [SerializeField] private TransitionManager transition;
     [SerializeField] private Transform spawnPosition;
-    [SerializeField] private String[] hazardTags = {"Hole Hazard" };
+    [SerializeField] private string[] hazardTags = { "Hole Hazard" };
 
     private Rigidbody rb;
 
@@ -22,12 +19,24 @@ public class hazardDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(isRespawning) return;
-        foreach(String tag in hazardTags)
+        if (isRespawning) return;
+        foreach (string tag in hazardTags)
         {
             if (other.CompareTag(tag))
             {
                 TriggerRespawnAll(); // gemensam funktion
+                break;
+            }
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (isRespawning) return;
+        foreach (string tag in hazardTags)
+        {
+            if (other.CompareTag(tag))
+            {
+                TriggerRespawnAll();
                 break;
             }
         }
@@ -38,7 +47,7 @@ public class hazardDetection : MonoBehaviour
     {
         if (isRespawning) return;
 
-        // kolla om vi träffar en annan boll (har samma script)
+        // kolla om vi trï¿½ffar en annan boll (har samma script)
         if (other.gameObject.GetComponent<hazardDetection>() != null)
         {
             TriggerRespawnAll(); //  samma death som hazard
@@ -63,7 +72,7 @@ public class hazardDetection : MonoBehaviour
 
         //rb.isKinematic = true;
 
-      
+
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
@@ -80,7 +89,7 @@ public class hazardDetection : MonoBehaviour
 
         rb.MovePosition(spawnPosition.position);
 
-        yield return new WaitForFixedUpdate(); 
+        yield return new WaitForFixedUpdate();
 
         //rb.isKinematic = false;
 
