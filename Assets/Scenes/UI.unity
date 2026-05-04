@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0acf1021ea6b52963a753d95e604278c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3897b321ca0c60eee953444018ecf50f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a97e7f716841e19f29a3aa1c32ce457f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f06280fc21ae19372b0db24b34c0d8c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -820,6 +820,7 @@ RectTransform:
   m_Children:
   - {fileID: 50579093}
   - {fileID: 257287599}
+  - {fileID: 448098904}
   - {fileID: 504162756}
   m_Father: {fileID: 6088659125207847446}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -848,7 +849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9fd70e97133ffd876a9a698dfa1a1e43, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d064825c0b548f2bb9a7fac97405e464, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -956,8 +957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191ddda40b8a5f9a88b990a28d84374d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastMenu
-  joystick: {fileID: 1444557984}
+  joystickLeft: {fileID: 447017282}
+  joystickRight: {fileID: 1969712821}
+  joystickTouch: {fileID: 1444557984}
   sliderUI: {fileID: 1362288726}
+  joystickModeButton: {fileID: 448098903}
   tiltControls: []
   calibrateButton: {fileID: 257287602}
   sensitivitySlider: {fileID: 2102162281}
@@ -969,9 +973,13 @@ MonoBehaviour:
   settingsPanel: {fileID: 1795301242}
   fastMenu: {fileID: 377341049}
   controlButtonImage: {fileID: 50579094}
-  tiltIcon: {fileID: 21300000, guid: 71fcbaac693229c4588e1fd13c0e46fa, type: 3}
-  joystickIcon: {fileID: 21300000, guid: 0acf1021ea6b52963a753d95e604278c, type: 3}
-  sliderIcon: {fileID: 21300000, guid: b1bf030b9ab30f748967da7c4b113571, type: 3}
+  joystickButtonImage: {fileID: 448098906}
+  tiltIcon: {fileID: 21300000, guid: b7b165fd3f823b278b919e6ea829c03c, type: 3}
+  joystickIcon: {fileID: 21300000, guid: 3897b321ca0c60eee953444018ecf50f, type: 3}
+  sliderIcon: {fileID: 21300000, guid: 4181fee720078ceeca1934888f79f79d, type: 3}
+  leftIcon: {fileID: 21300000, guid: 86641693842eab1e4a5d174cd20245ac, type: 3}
+  rightIcon: {fileID: 21300000, guid: 90d6539f5c87bafc1aa4f3583e7410ee, type: 3}
+  touchIcon: {fileID: 21300000, guid: 354ceecad8591f742926979e535264e4, type: 3}
 --- !u!1 &421769300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1082,143 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &447017282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6282142325914010153, guid: 92df24683cbb41289bd336db70ce6d77, type: 3}
+  m_PrefabInstance: {fileID: 929478941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &448098903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 448098904}
+  - component: {fileID: 448098907}
+  - component: {fileID: 448098906}
+  - component: {fileID: 448098905}
+  m_Layer: 5
+  m_Name: JoystickMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &448098904
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448098903}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.17, y: 0.89306664, z: 0.6698}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 377341050}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 12.076499, y: -0.7105117}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &448098905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448098903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 448098906}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 377341056}
+        m_TargetAssemblyTypeName: FastMenu, Assembly-CSharp
+        m_MethodName: toggleJoystick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &448098906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448098903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 86641693842eab1e4a5d174cd20245ac, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &448098907
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448098903}
+  m_CullTransparentMesh: 1
 --- !u!1 &504162755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b255abad7f544e783aeb46daf44541ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f022e0cbb1807f826a126e7562a4c33b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3281,6 +3426,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1969712821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6282142325914010153, guid: 92df24683cbb41289bd336db70ce6d77, type: 3}
+  m_PrefabInstance: {fileID: 5164305875280136538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1971125960 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3319510954587418152, guid: 0ff4030ad02061ae5b39cf04c28baeef, type: 3}

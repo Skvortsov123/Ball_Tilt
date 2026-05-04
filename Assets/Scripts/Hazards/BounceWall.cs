@@ -6,6 +6,8 @@ public class BounceWall : MonoBehaviour
     public float cooldownTime = 0.1f;
     private float lastBouncTime;
 
+    public AudioClip bounceSound;
+
     void Start()
     {
         lastBouncTime = Time.time;
@@ -23,6 +25,7 @@ public class BounceWall : MonoBehaviour
             Vector3 bounceDirection = transform.up;
             
             rb.linearVelocity = bounceDirection.normalized * bounceForce;
+            AudioManager.Instance.PlaySFX(bounceSound);
             Debug.Log("Boing!");
         }
     }
