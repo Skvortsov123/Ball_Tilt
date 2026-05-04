@@ -7,8 +7,12 @@ public class FastMenu : MonoBehaviour
     private Animator animator;
 
     [Header("Control Mode")]
-    public GameObject joystick;
+    public GameObject joystickLeft;
+    public GameObject joystickRight;
+    public GameObject joystickTouch;
     public GameObject sliderUI;
+    public GameObject joystickModeButton;
+
 
     public TiltControl[] tiltControls; // st�d f�r flera bollar
 
@@ -29,9 +33,13 @@ public class FastMenu : MonoBehaviour
 
     [Header("Control Icons")]
     public Image controlButtonImage;
+    public Image joystickButtonImage;
     public Sprite tiltIcon;
     public Sprite joystickIcon;
     public Sprite sliderIcon;
+    public Sprite leftIcon;
+    public Sprite rightIcon;
+    public Sprite touchIcon;
 
     void Start()
     {
@@ -109,9 +117,41 @@ public class FastMenu : MonoBehaviour
         UpdateControlUI();
     }
 
+    public void toggleJoystick()
+    {
+        switch (GameSettings.joystickMode)
+        {
+            case JoystickMode.Left:
+                GameSettings.joystickMode = JoystickMode.Right;
+                break;
+
+            case JoystickMode.Right:
+                GameSettings.joystickMode = JoystickMode.Touch;
+                break;
+            
+            case JoystickMode.Touch:
+                GameSettings.joystickMode = JoystickMode.Left;
+                break;
+        }
+        AudioManager.Instance.PlaySFX(clickSound);
+        UpdateControlUI();
+    }
+
     void UpdateControlUI()
     {
-        joystick.SetActive(GameSettings.controlMode == ControlMode.Joystick);
+        joystickModeButton.SetActive(GameSettings.controlMode == ControlMode.Joystick);
+        if (GameSettings.controlMode == ControlMode.Joystick)
+        {
+            joystickLeft.SetActive(GameSettings.joystickMode == JoystickMode.Left);
+            joystickRight.SetActive(GameSettings.joystickMode == JoystickMode.Right);
+            joystickTouch.SetActive(GameSettings.joystickMode == JoystickMode.Touch);
+        }
+        else
+        {
+            joystickTouch.SetActive(false);
+        }
+
+
         sliderUI.SetActive(GameSettings.controlMode == ControlMode.Slider);
 
         calibrateButton.interactable = (GameSettings.controlMode == ControlMode.Tilt);
@@ -129,6 +169,22 @@ public class FastMenu : MonoBehaviour
 
             case ControlMode.Slider:
                 controlButtonImage.sprite = sliderIcon;
+                break;
+        }
+
+        // Change icon on joystick mode button
+        switch (GameSettings.joystickMode)
+        {
+            case JoystickMode.Left:
+                joystickButtonImage.sprite = leftIcon;
+                break;
+
+            case JoystickMode.Right:
+                joystickButtonImage.sprite = rightIcon;
+                break;
+
+            case JoystickMode.Touch:
+                joystickButtonImage.sprite = touchIcon;
                 break;
         }
     }
@@ -171,6 +227,6 @@ public class FastMenu : MonoBehaviour
         GameSettings.deadZone = value;
     }
 
-    
+
 
 }
