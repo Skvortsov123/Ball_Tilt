@@ -41,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI.unity
     guid: acafbc0265985ebd59fb4975e0e182f8
+  - enabled: 1
+    path: Assets/Scenes/golf banor/GolfLevel1.unity
+    guid: 7115b886d3ec57846b8a77d9a16321ab
+  - enabled: 1
+    path: Assets/Scenes/golf banor/GolfLevel2.unity
+    guid: 3ea462b7583832e419b994f79bcf6656
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 801beddc9098f83e4b9a8b194721e39a, type: 3}
   m_UseUCBPForAssetBundles: 0
