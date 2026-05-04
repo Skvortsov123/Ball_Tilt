@@ -155,3 +155,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BounceWall
   bounceForce: 10
   cooldownTime: 0.1
+  bounceSound: {fileID: 8300000, guid: 140789207eeca3b418879aa315c105b6, type: 3}
