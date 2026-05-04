@@ -148,6 +148,8 @@ public class FastMenu : MonoBehaviour
         }
         else
         {
+            joystickLeft.SetActive(false);
+            joystickRight.SetActive(false);
             joystickTouch.SetActive(false);
         }
 
