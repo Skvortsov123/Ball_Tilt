@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3897b321ca0c60eee953444018ecf50f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acdb7cf10df997dd98d8b218d0ff9b46, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f06280fc21ae19372b0db24b34c0d8c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 738a55e4483e53f72990c3207762c09e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -974,12 +974,12 @@ MonoBehaviour:
   fastMenu: {fileID: 377341049}
   controlButtonImage: {fileID: 50579094}
   joystickButtonImage: {fileID: 448098906}
-  tiltIcon: {fileID: 21300000, guid: b7b165fd3f823b278b919e6ea829c03c, type: 3}
-  joystickIcon: {fileID: 21300000, guid: 3897b321ca0c60eee953444018ecf50f, type: 3}
+  tiltIcon: {fileID: 21300000, guid: 17f3bfa0964d20ad2a2249839548320b, type: 3}
+  joystickIcon: {fileID: 21300000, guid: acdb7cf10df997dd98d8b218d0ff9b46, type: 3}
   sliderIcon: {fileID: 21300000, guid: 4181fee720078ceeca1934888f79f79d, type: 3}
-  leftIcon: {fileID: 21300000, guid: 86641693842eab1e4a5d174cd20245ac, type: 3}
-  rightIcon: {fileID: 21300000, guid: 90d6539f5c87bafc1aa4f3583e7410ee, type: 3}
-  touchIcon: {fileID: 21300000, guid: 354ceecad8591f742926979e535264e4, type: 3}
+  leftIcon: {fileID: 21300000, guid: 03107706242b0c4e78ddbdc1f275f5a5, type: 3}
+  rightIcon: {fileID: 21300000, guid: 5d3a9f28a634a4361a99bb1a6d44df10, type: 3}
+  touchIcon: {fileID: 21300000, guid: b9520f360141d9fa3b2b58636b9f82a9, type: 3}
 --- !u!1 &421769300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 86641693842eab1e4a5d174cd20245ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03107706242b0c4e78ddbdc1f275f5a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
