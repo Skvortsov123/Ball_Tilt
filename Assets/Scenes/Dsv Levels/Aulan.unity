@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739627499215720762, guid: 64f5ca6732a0c5d41be7f10a410944f0, type: 3}
       propertyPath: bounceForce
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5912,7 +5912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6470322725498914103, guid: 630d34854a882604b9e397e3d79f50f4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.33625492
+      value: 0.34002095
       objectReference: {fileID: 0}
     - target: {fileID: 6470322725498914103, guid: 630d34854a882604b9e397e3d79f50f4, type: 3}
       propertyPath: m_LocalScale.z
@@ -5924,11 +5924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6470322725498914103, guid: 630d34854a882604b9e397e3d79f50f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.289
+      value: -1.3416
       objectReference: {fileID: 0}
     - target: {fileID: 6470322725498914103, guid: 630d34854a882604b9e397e3d79f50f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.742
+      value: 1.779
       objectReference: {fileID: 0}
     - target: {fileID: 6470322725498914103, guid: 630d34854a882604b9e397e3d79f50f4, type: 3}
       propertyPath: m_LocalRotation.w
