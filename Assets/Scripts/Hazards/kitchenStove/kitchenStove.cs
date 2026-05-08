@@ -15,6 +15,14 @@ public class kitchenStove : MonoBehaviour
     [SerializeField] private float transitionDuration = 1f;
     [Header("Particle System")]
     [SerializeField] private ParticleSystem stoveParticleSystem;
+    [Header("Sound Sources")]
+    [SerializeField] private AudioSource stoveAmbiance;
+
+    [SerializeField] private AudioClip stoveAmbianceAudio;
+    
+
+    
+
 
     private Renderer stoveRenderer;
     private bool isOn = false;
@@ -25,6 +33,9 @@ public class kitchenStove : MonoBehaviour
         stoveRenderer = GetComponent<Renderer>();
         stoveRenderer.material.color = offColor;
         gameObject.tag = "stoveOff";
+
+        stoveAmbiance.clip = stoveAmbianceAudio;
+        stoveAmbiance.Play();
     }
 
     void Update()
@@ -67,6 +78,7 @@ public class kitchenStove : MonoBehaviour
     {
         Color startColor = stoveRenderer.material.color;
         float timer = 0f;
+        
 
         while (timer < transitionDuration)
         {
