@@ -36,10 +36,12 @@ public class kitchenStove : MonoBehaviour
 
         stoveAmbiance.clip = stoveAmbianceAudio;
         stoveAmbiance.Play();
+        stoveAmbiance.volume = GameSettings.sfxVolume;
     }
 
     void Update()
     {
+        stoveAmbiance.volume = GameSettings.sfxVolume;
         if (startDelay > 0)
         {
             startDelay -= Time.deltaTime;
