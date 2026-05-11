@@ -19,11 +19,7 @@ public class kitchenStove : MonoBehaviour
     [SerializeField] private AudioSource stoveAmbiance;
 
     [SerializeField] private AudioClip stoveAmbianceAudio;
-    
-
-    
-
-
+    [SerializeField] private float reduceAudioMultiplier; //stove låter väldigt fel på max ljud
     private Renderer stoveRenderer;
     private bool isOn = false;
 
@@ -36,12 +32,12 @@ public class kitchenStove : MonoBehaviour
 
         stoveAmbiance.clip = stoveAmbianceAudio;
         stoveAmbiance.Play();
-        stoveAmbiance.volume = GameSettings.sfxVolume;
+        stoveAmbiance.volume = GameSettings.sfxVolume * reduceAudioMultiplier;
     }
 
     void Update()
     {
-        stoveAmbiance.volume = GameSettings.sfxVolume;
+        stoveAmbiance.volume = GameSettings.sfxVolume * reduceAudioMultiplier;
         if (startDelay > 0)
         {
             startDelay -= Time.deltaTime;
@@ -95,7 +91,12 @@ public class kitchenStove : MonoBehaviour
        
         if (setOnWhenDone){
             gameObject.tag = "stoveOn";
-            Instantiate(stoveParticleSystem, transform.parent);
+            ParticleSystem ps = Instantiate(stoveParticleSystem, transform.parent);
+            ps.transform.localScale = transform.parent.localScale;
         }
+    }
+    public AudioSource GetAudioSource()
+    {
+        return stoveAmbiance;
     }
 }
