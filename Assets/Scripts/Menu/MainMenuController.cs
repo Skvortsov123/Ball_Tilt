@@ -7,6 +7,15 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] AudioClip clickSound;
     public Animator animator;
 
+    private void Awake()
+    {
+        SaveManager.loadSettings();
+        if (!PlayerPrefs.HasKey("worldsUnlocked1"))
+        {
+            PlayerPrefs.SetInt("worldsUnlocked1", 1);
+            PlayerPrefs.Save();
+        }
+    }
     void Start()
     {
         // När spelet startar visas mainMenu och levelMenu göms

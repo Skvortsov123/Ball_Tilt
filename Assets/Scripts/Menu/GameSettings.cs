@@ -27,4 +27,5 @@ public static class GameSettings
     public static JoystickMode joystickMode = JoystickMode.Left;
 
     public static Vector3 calibrationOffset;
+   
 }

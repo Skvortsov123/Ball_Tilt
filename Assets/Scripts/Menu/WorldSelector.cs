@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class WorldSelector : MonoBehaviour
 {
     [SerializeField] GameObject[] worlds; // Array med alla world panels
     [SerializeField] AudioClip clickSound; // Ljud som spelas
-    private int currentWorld = 0; 
+    private int currentWorld = 0;
+
+    [SerializeField] private Button[] worldButtons;
+    [SerializeField] private GameObject lockImage;
+    [SerializeField] private TextMeshProUGUI completionText;
+
 
     void Start()
     {
@@ -20,6 +27,9 @@ public class WorldSelector : MonoBehaviour
         // Om vi går förbi sista världen börja om från början
         if (currentWorld >= worlds.Length)
             currentWorld = 0;
+
+
+        
 
         // Uppdatera vilken värld som visas
         ShowWorld(currentWorld);
@@ -45,11 +55,21 @@ public class WorldSelector : MonoBehaviour
 
     void ShowWorld(int index)
     {
-        // Loopa igenom alla worlds
         for (int i = 0; i < worlds.Length; i++)
         {
-            // Aktivera endast den world som matchar index
             worlds[i].SetActive(i == index);
         }
+
+        int worldIndex = index + 1;
+
+        bool unlocked = SaveManager.IsWorldUnlocked(worldIndex);
+
+        worldButtons[index].interactable = unlocked;
+
+        lockImage.SetActive(!unlocked);
+
+        int percent = SaveManager.getWorldCompletionPercentage(worldIndex);
+
+        completionText.text = percent + "%";
     }
 }
