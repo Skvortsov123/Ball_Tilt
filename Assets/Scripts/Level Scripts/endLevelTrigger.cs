@@ -22,8 +22,9 @@ public class endLevelTrigger : MonoBehaviour
 
     private void ChangeLevel()
     {
-        
-        SaveManager.completeLevel(currentLevel); // Markera nuvarande nivå som slutförd
+        int globalLevel = SaveManager.GetGlobalLevelIndex(currentWorld, currentLevel);
+
+        SaveManager.completeLevel(globalLevel);
         SaveManager.checkWorldUnlock(currentWorld); // Kolla om nästa värld ska låsas upp
         SceneManager.LoadScene(nextSceneIs, LoadSceneMode.Single);
     }

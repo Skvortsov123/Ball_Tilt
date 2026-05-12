@@ -4,7 +4,7 @@ public class SaveManager : MonoBehaviour
 {
 
     public static int[] worldLevelCounts = {
-    8, // Tutorial has 8 levels
+    7, // Tutorial has 7 levels
     2, // DSV has 2 levels
     2, // Golf has 2 levels
     5, // Kitchen has 5 levels
@@ -69,6 +69,18 @@ public class SaveManager : MonoBehaviour
         {
             unlockWorld(worldIndex + 1);
         }
+    }
+
+    public static int GetGlobalLevelIndex(int worldIndex, int localLevelIndex)
+    {
+        int globalIndex = localLevelIndex;
+
+        for (int i = 0; i < worldIndex - 1; i++)
+        {
+            globalIndex += worldLevelCounts[i];
+        }
+
+        return globalIndex;
     }
 
     public static int getWorldCompletionPercentage(int worldIndex)

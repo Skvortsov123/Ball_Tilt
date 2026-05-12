@@ -56,12 +56,8 @@ public class FastMenu : MonoBehaviour
         settingsPanel.SetActive(false);
 
         // --- S�TT INITIALA V�RDEN P� SLIDERS (viktigt att g�ra f�re listeners) ---
-        sensitivitySlider.value = GameSettings.sensitivity;
-        deadzoneSlider.value = GameSettings.deadZone;
-        musicSlider.value = GameSettings.musicVolume;
-        volumeSlider.value = GameSettings.sfxVolume;
+        RefreshSettingsUI();
 
-        toggleMuted.isOn = GameSettings.musicMuted;
 
         // --- KOPPLA SLIDERS TILL AUDIO MANAGER (via singleton) ---
         // Tar bort gamla listeners först för att undvika duplicates om UI laddas flera gånger
@@ -200,7 +196,9 @@ public class FastMenu : MonoBehaviour
     public void OpenSettings()
     {
         AudioManager.Instance.PlaySFX(clickSound);
+        RefreshSettingsUI();
         settingsPanel.SetActive(true);
+
 
         if (fastMenu != null)
             fastMenu.SetActive(false);
@@ -229,6 +227,13 @@ public class FastMenu : MonoBehaviour
         GameSettings.deadZone = value;
     }
 
-
+    private void RefreshSettingsUI()
+    {
+        sensitivitySlider.value = GameSettings.sensitivity;
+        deadzoneSlider.value = GameSettings.deadZone;
+        musicSlider.value = GameSettings.musicVolume;
+        volumeSlider.value = GameSettings.sfxVolume;
+        toggleMuted.isOn = GameSettings.musicMuted;
+    }
 
 }
