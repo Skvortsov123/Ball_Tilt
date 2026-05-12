@@ -22,6 +22,8 @@ public class FastMenu : MonoBehaviour
 
     [Header("Sound")]
     public AudioClip clickSound;
+    public AudioClip slideOpenSound;
+    public AudioClip slideCloseSound;
     public Slider musicSlider;
     public Slider volumeSlider;
     public Toggle toggleMuted;
@@ -93,7 +95,14 @@ public class FastMenu : MonoBehaviour
     public void toggleMenu()
     {
         animator.SetTrigger("Toggle");
-        AudioManager.Instance.PlaySFX(clickSound);
+        
+        if (animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Closed") //Menu opens
+        {
+            AudioManager.Instance.PlaySFX(slideOpenSound);
+        } else  //Menu closes
+        {
+            AudioManager.Instance.PlaySFX(slideCloseSound);
+        }
     }
 
     public void toggleControl()
