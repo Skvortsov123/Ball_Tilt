@@ -6,10 +6,11 @@ public class SaveManager : MonoBehaviour
     // Index 0 = World 1, Index 1 = World 2 osv.
     public static int[] worldLevelCounts = {
         7, // Tutorial har 7 levels
-        2, // DSV har 2 levels
+        3,  // Illusion har 3 levels
         2, // Golf har 2 levels
-        5, // Kitchen har 5 levels
-        5  // Mirror har 5 levels
+        2, // DSV har 2 levels
+        5 // Kitchen har 5 levels
+        
     };
 
     // Sparar alla spelarens settings till PlayerPrefs

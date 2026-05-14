@@ -1071,7 +1071,7 @@ GameObject:
   - component: {fileID: 556152843}
   - component: {fileID: 556152842}
   m_Layer: 5
-  m_Name: World3 panel
+  m_Name: Illusion Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fda47d7d56f5f54bb6805460f58e1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadSceneButton
-  sceneName: s
+  sceneName: Illusion1
   clickSound: {fileID: 8300000, guid: 4a6049782cff9be4888dba1a1ad3f755, type: 3}
 --- !u!1 &861250662
 GameObject:
@@ -2066,9 +2066,9 @@ RectTransform:
   m_Children:
   - {fileID: 651384435}
   - {fileID: 201482845}
+  - {fileID: 556152841}
   - {fileID: 158462028}
   - {fileID: 502179978}
-  - {fileID: 556152841}
   - {fileID: 1120480983}
   m_Father: {fileID: 1857446014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -2091,9 +2091,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldSelector
   worlds:
   - {fileID: 201482844}
-  - {fileID: 158462027}
-  - {fileID: 502179977}
   - {fileID: 556152840}
+  - {fileID: 502179977}
+  - {fileID: 158462027}
   clickSound: {fileID: 8300000, guid: 4a6049782cff9be4888dba1a1ad3f755, type: 3}
   worldButtons:
   - {fileID: 1268297203}
