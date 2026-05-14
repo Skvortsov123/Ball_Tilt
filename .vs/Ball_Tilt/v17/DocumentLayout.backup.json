@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\level scripts\\debugdatareset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level scripts\\debugdatareset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\level scripts\\debugleveldatareset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level scripts\\debugleveldatareset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|c:\\users\\albin\\onedrive\\dokument\\github\\ball_tilt\\assets\\scripts\\menu\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\worldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\worldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\level scripts\\endleveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level scripts\\endleveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\level scripts\\scenemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level scripts\\scenemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,24 +35,12 @@
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fastmenu\\fastmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\worldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\worldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\level scripts\\scenemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level scripts\\scenemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\menu\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\mainmenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\level scripts\\endleveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level scripts\\endleveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E36B376B-55CB-9770-B4CE-0474224D251D}|Assembly-CSharp.csproj|C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\assets\\scripts\\control\\tiltcontrol\\tiltcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,19 +59,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DebugDataReset.cs",
-              "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\DebugDataReset.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Level Scripts\\DebugDataReset.cs",
-              "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\DebugDataReset.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Level Scripts\\DebugDataReset.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "DebugLevelDataReset.cs",
+              "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\DebugLevelDataReset.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Level Scripts\\DebugLevelDataReset.cs",
+              "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\DebugLevelDataReset.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Level Scripts\\DebugLevelDataReset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T12:14:20.413Z",
+              "WhenOpened": "2026-05-14T12:18:03.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "SceneManagement.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\SceneManagement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Level Scripts\\SceneManagement.cs",
@@ -79,11 +79,12 @@
               "RelativeToolTip": "Assets\\Scripts\\Level Scripts\\SceneManagement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:50:04.802Z"
+              "WhenOpened": "2026-05-14T11:50:04.802Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LoadSceneButton.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\LoadSceneButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\LoadSceneButton.cs",
@@ -107,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "FastMenu.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\FastMenu\\FastMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FastMenu\\FastMenu.cs",
@@ -119,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\AudioManager.cs",
@@ -131,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "endLevelTrigger.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Level Scripts\\endLevelTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Level Scripts\\endLevelTrigger.cs",
@@ -139,23 +140,25 @@
               "RelativeToolTip": "Assets\\Scripts\\Level Scripts\\endLevelTrigger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T12:11:58.983Z"
+              "WhenOpened": "2026-05-12T12:11:58.983Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "WorldSelector.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\WorldSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\WorldSelector.cs",
               "ToolTip": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\WorldSelector.cs",
               "RelativeToolTip": "Assets\\Scripts\\Menu\\WorldSelector.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowEgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwE4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T11:48:15.123Z"
+              "WhenOpened": "2026-05-12T11:48:15.123Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MainMenuController.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\MainMenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\MainMenuController.cs",
@@ -167,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SaveManager.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\SaveManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\SaveManager.cs",
@@ -175,12 +178,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Menu\\SaveManager.cs",
               "ViewState": "AgIAAK8AAAAAAAAAAAAmwMwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T11:12:11.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T11:12:11.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "GameSettings.cs",
               "DocumentMoniker": "C:\\Users\\albin\\OneDrive\\Dokument\\GitHub\\Ball_Tilt\\Assets\\Scripts\\Menu\\GameSettings.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\GameSettings.cs",
@@ -188,8 +190,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Menu\\GameSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T11:09:22.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T11:09:22.801Z"
             }
           ]
         }

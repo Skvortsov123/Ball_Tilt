@@ -11,6 +11,8 @@ public class hazardDetection : MonoBehaviour
 
     private bool isRespawning = false;
 
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,7 +56,7 @@ public class hazardDetection : MonoBehaviour
         }
     }
 
-    void TriggerRespawnAll()
+    /*void TriggerRespawnAll()
     {
         isRespawning = true;
 
@@ -62,11 +64,19 @@ public class hazardDetection : MonoBehaviour
         {
             ball.StartCoroutine(ball.Respawn());
         }
+        FindFirstObjectByType<FreezeLevelManager>().RestartLevel();
+    }*/
+    void TriggerRespawnAll()
+    {
+        if (isRespawning) return;
+
+        isRespawning = true;
+
+        StartCoroutine(RestartAfterDeath());
     }
 
 
-
-    IEnumerator Respawn()
+    /*IEnumerator Respawn()
     {
         transition.ActivateHazardHoleDeathAnimation();
 
@@ -94,5 +104,37 @@ public class hazardDetection : MonoBehaviour
         //rb.isKinematic = false;
 
         isRespawning = false;
+    }*/
+    IEnumerator RestartAfterDeath()
+    {
+        // spela death animation
+        transition.ActivateHazardHoleDeathAnimation();
+
+        // stoppa bollens rörelse direkt
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        // reset slider om den används
+        var slider = FindFirstObjectByType<SliderControl>();
+        if (slider != null)
+        {
+            slider.ResetToCenter();
+        }
+
+        // vänta tills animationen spelat klart
+        yield return new WaitForSeconds(1.2f);
+
+        // ladda om scenen
+        var freezeManager = FindFirstObjectByType<FreezeLevelManager>();
+
+        if (freezeManager != null)
+        {
+            freezeManager.RestartLevel();
+        }
+        else
+        {
+            Debug.LogError("FreezeLevelManager hittades inte!");
+        }
     }
+
 }
