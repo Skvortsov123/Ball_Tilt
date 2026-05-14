@@ -72,4 +72,9 @@ public class WorldSelector : MonoBehaviour
 
         completionText.text = percent + "%";
     }
+
+    public void RefreshCurrentWorld()
+    {
+        ShowWorld(currentWorld);
+    }
 }

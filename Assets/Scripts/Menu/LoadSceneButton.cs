@@ -9,8 +9,10 @@ public class LoadSceneButton : MonoBehaviour
     public void LoadScene()
     {
         AudioManager.Instance.PlaySFX(clickSound);
-
+        SaveManager.saveSettings();
         // Laddar scenen med namnet som du skrivit in i Inspector
         SceneManager.LoadScene(sceneName);
+        SaveManager.loadSettings(); // Ladda inställningar när scenen laddas
+
     }
 }

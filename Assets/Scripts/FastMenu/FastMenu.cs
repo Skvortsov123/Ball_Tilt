@@ -220,6 +220,8 @@ public class FastMenu : MonoBehaviour
 
         if (fastMenu != null)
             fastMenu.SetActive(true);
+
+        SaveManager.saveSettings();
     }
 
     public void SetSensitivity(float value)
