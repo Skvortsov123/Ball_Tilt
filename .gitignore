@@ -18,6 +18,7 @@
 *.booproj
 *.svd
 *.pdb
+.vs/
 
 # Unity Cloud Build
 /[Cc]ache/
