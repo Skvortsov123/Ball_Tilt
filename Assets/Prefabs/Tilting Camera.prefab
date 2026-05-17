@@ -154,3 +154,7 @@ MonoBehaviour:
   amplitude: 1
   target: {fileID: 0}
   followSpeed: 5
+  referenceAspect: 2.1666667
+  referenceDistance: 30
+  minDistance: 30
+  maxDistance: 45
