@@ -15,7 +15,11 @@ public class kitchenStove : MonoBehaviour
     [SerializeField] private float transitionDuration = 1f;
     [Header("Particle System")]
     [SerializeField] private ParticleSystem stoveParticleSystem;
+    [Header("Sound Sources")]
+    [SerializeField] private AudioSource stoveAmbiance;
 
+    [SerializeField] private AudioClip stoveAmbianceAudio;
+    [SerializeField] private float reduceAudioMultiplier; //stove låter väldigt fel på max ljud
     private Renderer stoveRenderer;
     private bool isOn = false;
 
@@ -25,10 +29,15 @@ public class kitchenStove : MonoBehaviour
         stoveRenderer = GetComponent<Renderer>();
         stoveRenderer.material.color = offColor;
         gameObject.tag = "stoveOff";
+
+        stoveAmbiance.clip = stoveAmbianceAudio;
+        stoveAmbiance.Play();
+        stoveAmbiance.volume = GameSettings.sfxVolume * reduceAudioMultiplier;
     }
 
     void Update()
     {
+        stoveAmbiance.volume = GameSettings.sfxVolume * reduceAudioMultiplier;
         if (startDelay > 0)
         {
             startDelay -= Time.deltaTime;
@@ -67,6 +76,7 @@ public class kitchenStove : MonoBehaviour
     {
         Color startColor = stoveRenderer.material.color;
         float timer = 0f;
+        
 
         while (timer < transitionDuration)
         {
@@ -81,7 +91,12 @@ public class kitchenStove : MonoBehaviour
        
         if (setOnWhenDone){
             gameObject.tag = "stoveOn";
-            Instantiate(stoveParticleSystem, transform.parent);
+            ParticleSystem ps = Instantiate(stoveParticleSystem, transform.parent);
+            ps.transform.localScale = transform.parent.localScale;
         }
+    }
+    public AudioSource GetAudioSource()
+    {
+        return stoveAmbiance;
     }
 }
