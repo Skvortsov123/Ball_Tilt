@@ -32,13 +32,14 @@ public class SaveManager : MonoBehaviour
         // Joystick mode (Left / Right / Touch)
         PlayerPrefs.SetInt("JoystickMode", (int)GameSettings.joystickMode);
 
-        // Sparar calibration offset för tilt controls
+        /*// Sparar calibration offset för tilt controls
         PlayerPrefs.SetFloat("CalibrationOffsetX", GameSettings.calibrationOffset.x);
         PlayerPrefs.SetFloat("CalibrationOffsetY", GameSettings.calibrationOffset.y);
         PlayerPrefs.SetFloat("CalibrationOffsetZ", GameSettings.calibrationOffset.z);
-
+        */
         // Viktigt: faktiskt skriva till disk
         PlayerPrefs.Save();
+        Debug.Log("Settings sparade!");
     }
 
     // Laddar alla sparade settings från PlayerPrefs
@@ -74,7 +75,7 @@ public class SaveManager : MonoBehaviour
                 (int)JoystickMode.Left
             );
 
-        // Hämtar sparad calibration offset
+        /*// Hämtar sparad calibration offset
         float offsetX =
             PlayerPrefs.GetFloat("CalibrationOffsetX", 0f);
 
@@ -86,6 +87,8 @@ public class SaveManager : MonoBehaviour
 
         GameSettings.calibrationOffset =
             new Vector3(offsetX, offsetY, offsetZ);
+        */
+        Debug.Log("Settings loadade!");
     }
 
     // Markerar en level som klarad

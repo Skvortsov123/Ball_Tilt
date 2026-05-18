@@ -91203,8 +91203,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7956391112179192014, guid: 1e0c1114609c9004198ff87e6043fd86, type: 3}
+      propertyPath: maxDistance
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956391112179192014, guid: 1e0c1114609c9004198ff87e6043fd86, type: 3}
+      propertyPath: minDistance
+      value: 12.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956391112179192014, guid: 1e0c1114609c9004198ff87e6043fd86, type: 3}
       propertyPath: tiltAmplitude
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956391112179192014, guid: 1e0c1114609c9004198ff87e6043fd86, type: 3}
+      propertyPath: referenceDistance
+      value: 12.39
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3925901355035572784, guid: 1e0c1114609c9004198ff87e6043fd86, type: 3}

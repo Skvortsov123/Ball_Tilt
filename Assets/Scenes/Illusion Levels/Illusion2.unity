@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &80553660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80553661}
+  m_Layer: 0
+  m_Name: Destination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80553661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80553660}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -3.7799997, y: 0.5, z: 0.13999987}
+  m_LocalScale: {x: 1, y: 10, z: 10.785001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &119320335
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +448,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4575579371106614005, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
+      propertyPath: nextSceneIs
+      value: Illusion3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575579371106614005, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
+      propertyPath: currentLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575579371106614005, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
+      propertyPath: currentWorld
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7873870728241069819, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
       propertyPath: m_Name
       value: Finish Hole (1)
@@ -700,6 +743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter
       objectReference: {fileID: 0}
+    - target: {fileID: 6443220621355412101, guid: a657384e2494cfd4eabf13d93bb4ce4a, type: 3}
+      propertyPath: teleportPosition
+      value: 
+      objectReference: {fileID: 80553661}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -817,6 +864,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &272375991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272375992}
+  m_Layer: 0
+  m_Name: Destination (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272375992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272375991}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -4.2320004, y: 0.5, z: -7.02}
+  m_LocalScale: {x: 1, y: 10, z: 10.785}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &363967848
 GameObject:
   m_ObjectHideFlags: 0
@@ -4675,7 +4753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1176835826049554257, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.246
+      value: 0.457
       objectReference: {fileID: 0}
     - target: {fileID: 1176835826049554257, guid: 599a23e52c6a39f49944adcb2b612d31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4740,7 +4818,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4575579371106614005, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
       propertyPath: nextSceneIs
-      value: tutorialLevel4
+      value: Illusion3
       objectReference: {fileID: 0}
     - target: {fileID: 4575579371106614005, guid: 1be4dbe5488f5fc4db93bd81ad5197ed, type: 3}
       propertyPath: currentLevel
@@ -5045,7 +5123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2407588567381938694, guid: 24c2bc6a7669e1a429b11212c39674af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.246
+      value: 0.502
       objectReference: {fileID: 0}
     - target: {fileID: 2407588567381938694, guid: 24c2bc6a7669e1a429b11212c39674af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5090,6 +5168,10 @@ PrefabInstance:
     - target: {fileID: 8049199254475269044, guid: 24c2bc6a7669e1a429b11212c39674af, type: 3}
       propertyPath: m_Name
       value: Enemy Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049199254475269044, guid: 24c2bc6a7669e1a429b11212c39674af, type: 3}
+      propertyPath: m_TagString
+      value: Hole Hazard
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 774815169193171297, guid: 24c2bc6a7669e1a429b11212c39674af, type: 3}
@@ -6572,6 +6654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6443220621355412101, guid: a657384e2494cfd4eabf13d93bb4ce4a, type: 3}
+      propertyPath: teleportPosition
+      value: 
+      objectReference: {fileID: 272375992}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8480,7 +8566,7 @@ Transform:
   m_GameObject: {fileID: 1983982511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14479, y: 1.349, z: -1.03}
+  m_LocalPosition: {x: 0.14479, y: 1.66, z: -1.03}
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8663,6 +8749,8 @@ SceneRoots:
   - {fileID: 834108693}
   - {fileID: 208676370}
   - {fileID: 363967852}
+  - {fileID: 80553661}
   - {fileID: 247715025}
+  - {fileID: 272375992}
   - {fileID: 1496524563}
   - {fileID: 182095657}

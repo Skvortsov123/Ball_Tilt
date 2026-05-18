@@ -7,6 +7,11 @@ public class FreezeLevelManager : MonoBehaviour
 
     private bool waitingForTap = true;
 
+    void Awake()
+    {
+        SaveManager.loadSettings();
+    }
+
     void Start()
     {
         tapToStartPanel.SetActive(false);
@@ -15,7 +20,17 @@ public class FreezeLevelManager : MonoBehaviour
 
     void Update()
     {
-        if (waitingForTap && (Input.GetMouseButtonDown(0) || Input.touchCount > 0))
+        if (!waitingForTap) return;
+
+        // Editor / PC test
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartGame();
+            return;
+        }
+
+        // Mobil-touch (bara när ny touch börjar)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             StartGame();
         }
@@ -33,6 +48,7 @@ public class FreezeLevelManager : MonoBehaviour
         Time.timeScale = 1f;
         waitingForTap = false;
         tapToStartPanel.SetActive(false);
+        SaveManager.loadSettings();
     }
 
     public void RestartLevel()
