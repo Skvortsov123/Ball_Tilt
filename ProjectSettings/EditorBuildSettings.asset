@@ -56,6 +56,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Illusion Levels/Illusion3.unity
     guid: 1bceddebc24dee947b17e3f0f02a556b
+  - enabled: 1
+    path: Assets/Scenes/kitchenLevels/kitchenLvl1.unity
+    guid: 353551e7294550448a6ba4802d6a226f
+  - enabled: 1
+    path: Assets/Scenes/kitchenLevels/kitchenLvl2.unity
+    guid: dfecdb531732d3140892495f9ca187d7
+  - enabled: 1
+    path: Assets/Scenes/kitchenLevels/kitchenLvl3.unity
+    guid: ce3a8cd499976ff4cb218248c5c1974c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 801beddc9098f83e4b9a8b194721e39a, type: 3}
   m_UseUCBPForAssetBundles: 0
