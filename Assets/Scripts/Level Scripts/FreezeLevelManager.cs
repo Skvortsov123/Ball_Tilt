@@ -38,6 +38,7 @@ public class FreezeLevelManager : MonoBehaviour
 
     void PauseGame()
     {
+        AudioManager.Instance.toggleSFX(true);
         Time.timeScale = 0f;
         waitingForTap = true;
         tapToStartPanel.SetActive(true);
@@ -45,6 +46,7 @@ public class FreezeLevelManager : MonoBehaviour
 
     void StartGame()
     {
+        AudioManager.Instance.toggleSFX(false);
         Time.timeScale = 1f;
         waitingForTap = false;
         tapToStartPanel.SetActive(false);

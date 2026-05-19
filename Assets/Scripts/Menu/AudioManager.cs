@@ -121,6 +121,11 @@ public class AudioManager : MonoBehaviour
         sfxSource.volume = value;
         GameSettings.sfxVolume = value;
     }
+    public void toggleSFX(bool muted)
+    {
+        sfxSource.mute = muted;
+        
+    }
 
     public void ToggleMusic(bool muted)
     {
