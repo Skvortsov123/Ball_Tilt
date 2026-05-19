@@ -140,6 +140,8 @@ public class FastMenu : MonoBehaviour
                 break;
         }
         AudioManager.Instance.PlaySFX(clickSound);
+        SaveManager.saveSettings();
+
         UpdateControlUI();
     }
 
