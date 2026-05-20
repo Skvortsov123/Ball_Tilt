@@ -217,6 +217,34 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Progress resetad.");
     }
 
+    // Låser upp alla levels/worlds för testning
+    public static void UnlockAllLevels()
+    {
+        int globalLevelIndex = 1;
+
+        // Loopar igenom alla worlds
+        for (int world = 0; world < worldLevelCounts.Length; world++)
+        {
+            // Loopar igenom alla levels i världen
+            for (int level = 0;
+                 level < worldLevelCounts[world];
+                 level++)
+            {
+                // Markerar level som klarad
+                PlayerPrefs.SetInt(
+                    "levelCompleted_" + globalLevelIndex,
+                    1
+                );
+
+                globalLevelIndex++;
+            }
+        }
+
+        PlayerPrefs.Save();
+
+        Debug.Log("Alla levels upplåsta!");
+    }
+
 
 
 }

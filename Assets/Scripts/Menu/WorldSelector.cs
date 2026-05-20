@@ -78,4 +78,11 @@ public class WorldSelector : MonoBehaviour
     {
         ShowWorld(currentWorld);
     }
+
+    public void DebugUnlockAll()
+    {
+        SaveManager.UnlockAllLevels();
+
+        RefreshCurrentWorld();
+    }
 }
