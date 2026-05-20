@@ -141,4 +141,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TiltLight
   speed: 2
-  amplitude: 2.5
+  amplitude: 10
