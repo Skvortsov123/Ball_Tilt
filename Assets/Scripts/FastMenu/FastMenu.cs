@@ -31,7 +31,7 @@ public class FastMenu : MonoBehaviour
     [Header("Menus")]
     public GameObject settingsPanel;
     public GameObject fastMenu;
-
+    public PopUpFeedback popText;
 
     [Header("Control Icons")]
     public Image controlButtonImage;
@@ -44,7 +44,7 @@ public class FastMenu : MonoBehaviour
     public Sprite touchIcon;
 
     void Start()
-    {
+    {   
         animator = GetComponent<Animator>();
 
         // H�mta alla bollar i scenen
@@ -106,14 +106,17 @@ public class FastMenu : MonoBehaviour
         {
             case ControlMode.Tilt:
                 GameSettings.controlMode = ControlMode.Joystick;
+                popText.pop("Joystick");
                 break;
 
             case ControlMode.Joystick:
                 GameSettings.controlMode = ControlMode.Slider;
+                popText.pop("Slider");
                 break;
 
             case ControlMode.Slider:
                 GameSettings.controlMode = ControlMode.Tilt;
+                popText.pop("Tilt");
                 break;
         }
         AudioManager.Instance.PlaySFX(clickSound);
@@ -127,14 +130,17 @@ public class FastMenu : MonoBehaviour
         {
             case JoystickMode.Left:
                 GameSettings.joystickMode = JoystickMode.Right;
+                popText.pop("Right");
                 break;
 
             case JoystickMode.Right:
                 GameSettings.joystickMode = JoystickMode.Touch;
+                popText.pop("Free");
                 break;
             
             case JoystickMode.Touch:
                 GameSettings.joystickMode = JoystickMode.Left;
+                popText.pop("Left");
                 break;
         }
         AudioManager.Instance.PlaySFX(clickSound);
@@ -201,6 +207,7 @@ public class FastMenu : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(clickSound);
         GameSettings.calibrationOffset = Input.gyro.gravity;
+        popText.pop("Calibrated");
     }
 
     public void OpenSettings()
