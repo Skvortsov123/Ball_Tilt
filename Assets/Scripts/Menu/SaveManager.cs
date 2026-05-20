@@ -9,7 +9,7 @@ public class SaveManager : MonoBehaviour
         3,  // Illusion har 3 levels
         2, // Golf har 2 levels
         2, // DSV har 2 levels
-        5 // Kitchen har 5 levels
+        3 // Kitchen har 3 levels
         
     };
 
@@ -114,19 +114,15 @@ public class SaveManager : MonoBehaviour
         if (worldIndex == 1)
             return true;
 
-        // Returnerar true om worlden är sparad som upplåst
-        return PlayerPrefs.GetInt(
-            "worldsUnlocked" + worldIndex,
-            0
-        ) == 1;
+        // Alla worlds låses upp när world 1 är 100%
+        return getWorldCompletionPercentage(1) >= 100;
     }
 
     // Kollar om hela världen är klar
     // Om ja, lås upp nästa world
     public static void checkWorldUnlock(int worldIndex)
     {
-        int completionPercentage =
-            getWorldCompletionPercentage(worldIndex);
+        int completionPercentage = getWorldCompletionPercentage(worldIndex);
 
         // Om världen är 100% klar
         if (completionPercentage >= 100)

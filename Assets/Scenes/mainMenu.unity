@@ -2608,9 +2608,10 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: 4a6049782cff9be4888dba1a1ad3f755, type: 3}
   worldButtons:
   - {fileID: 1268297203}
-  - {fileID: 2118591319}
-  - {fileID: 1901499181}
   - {fileID: 770397533}
+  - {fileID: 1901499181}
+  - {fileID: 2118591319}
+  - {fileID: 34255830}
   lockImage: {fileID: 1335148216}
   completionText: {fileID: 1608637639}
 --- !u!1001 &1046493239
