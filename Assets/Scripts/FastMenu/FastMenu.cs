@@ -47,8 +47,6 @@ public class FastMenu : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-
-
         // H�mta alla bollar i scenen
         tiltControls = FindObjectsByType<TiltControl>(FindObjectsSortMode.None);
         Debug.Log("TiltControls found: " + tiltControls.Length);
